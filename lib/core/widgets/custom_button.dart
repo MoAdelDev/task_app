@@ -13,6 +13,7 @@ class CustomButton extends StatelessWidget {
   final bool isExpand;
   final Widget? child;
   final double? width;
+  final Color? backgroundColor;
   const CustomButton({
     super.key,
     required this.onPressed,
@@ -22,6 +23,7 @@ class CustomButton extends StatelessWidget {
     this.isExpand = true,
     this.child,
     this.width,
+    this.backgroundColor,
   });
 
   @override
@@ -35,7 +37,7 @@ class CustomButton extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: context.colorScheme.primary,
+        color: backgroundColor ?? context.colorScheme.primary,
       ),
       child: MaterialButton(
         onPressed: () async {
