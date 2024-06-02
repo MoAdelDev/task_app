@@ -5,7 +5,7 @@ import 'package:task_app/core/style/font_weight_helper.dart';
 
 class ThemeManager {
   ThemeManager._();
-  static ThemeData light(String locale) => ThemeData(
+  static ThemeData light() => ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.light(
           primary: ColorLightManager.primary,
@@ -40,22 +40,22 @@ class ThemeManager {
           ),
         ),
         scaffoldBackgroundColor: ColorLightManager.background,
-        fontFamily: locale == 'ar' ? 'Cairo' : 'SourceSans3',
+        fontFamily: 'Inter',
         textTheme: TextTheme(
           titleLarge: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 24.sp,
+            fontSize: 30.sp,
           ),
           titleMedium: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 20.sp,
+            fontSize: 26.sp,
           ),
           titleSmall: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 16.sp,
+            fontSize: 20.sp,
           ),
           bodyLarge: TextStyle(
             color: ColorLightManager.onBackground,
