@@ -20,21 +20,30 @@ mixin _$HomeState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
-    required TResult Function(bool isFormHidded) showCreateTaskForm,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() loading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
-    TResult? Function(bool isFormHidded)? showCreateTaskForm,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? loading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
-    TResult Function(bool isFormHidded)? showCreateTaskForm,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? loading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -42,21 +51,31 @@ mixin _$HomeState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
-    required TResult Function(ChangeCreateTaskState value) showCreateTaskForm,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) loading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
-    TResult? Function(ChangeCreateTaskState value)? showCreateTaskForm,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? loading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
-    TResult Function(ChangeCreateTaskState value)? showCreateTaskForm,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? loading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -119,7 +138,10 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
-    required TResult Function(bool isFormHidded) showCreateTaskForm,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() loading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
   }) {
     return initial();
   }
@@ -129,7 +151,10 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
-    TResult? Function(bool isFormHidded)? showCreateTaskForm,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? loading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
   }) {
     return initial?.call();
   }
@@ -139,7 +164,10 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
-    TResult Function(bool isFormHidded)? showCreateTaskForm,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? loading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -153,7 +181,11 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
-    required TResult Function(ChangeCreateTaskState value) showCreateTaskForm,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) loading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
   }) {
     return initial(this);
   }
@@ -163,7 +195,10 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
-    TResult? Function(ChangeCreateTaskState value)? showCreateTaskForm,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? loading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
   }) {
     return initial?.call(this);
   }
@@ -173,7 +208,10 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
-    TResult Function(ChangeCreateTaskState value)? showCreateTaskForm,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? loading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -254,7 +292,10 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
-    required TResult Function(bool isFormHidded) showCreateTaskForm,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() loading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
   }) {
     return selectTaskFilter(index);
   }
@@ -264,7 +305,10 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
-    TResult? Function(bool isFormHidded)? showCreateTaskForm,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? loading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
   }) {
     return selectTaskFilter?.call(index);
   }
@@ -274,7 +318,10 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
-    TResult Function(bool isFormHidded)? showCreateTaskForm,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? loading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
     required TResult orElse(),
   }) {
     if (selectTaskFilter != null) {
@@ -288,7 +335,11 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
-    required TResult Function(ChangeCreateTaskState value) showCreateTaskForm,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) loading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
   }) {
     return selectTaskFilter(this);
   }
@@ -298,7 +349,10 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
-    TResult? Function(ChangeCreateTaskState value)? showCreateTaskForm,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? loading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
   }) {
     return selectTaskFilter?.call(this);
   }
@@ -308,7 +362,10 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
-    TResult Function(ChangeCreateTaskState value)? showCreateTaskForm,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? loading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
     required TResult orElse(),
   }) {
     if (selectTaskFilter != null) {
@@ -328,20 +385,21 @@ abstract class SelectTaskFilter implements HomeState {
 }
 
 /// @nodoc
-abstract class _$$ShowCreateTaskFormImplCopyWith<$Res> {
-  factory _$$ShowCreateTaskFormImplCopyWith(_$ShowCreateTaskFormImpl value,
-          $Res Function(_$ShowCreateTaskFormImpl) then) =
-      __$$ShowCreateTaskFormImplCopyWithImpl<$Res>;
+abstract class _$$ChangeCreateTaskStateImplCopyWith<$Res> {
+  factory _$$ChangeCreateTaskStateImplCopyWith(
+          _$ChangeCreateTaskStateImpl value,
+          $Res Function(_$ChangeCreateTaskStateImpl) then) =
+      __$$ChangeCreateTaskStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool isFormHidded});
 }
 
 /// @nodoc
-class __$$ShowCreateTaskFormImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$ShowCreateTaskFormImpl>
-    implements _$$ShowCreateTaskFormImplCopyWith<$Res> {
-  __$$ShowCreateTaskFormImplCopyWithImpl(_$ShowCreateTaskFormImpl _value,
-      $Res Function(_$ShowCreateTaskFormImpl) _then)
+class __$$ChangeCreateTaskStateImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$ChangeCreateTaskStateImpl>
+    implements _$$ChangeCreateTaskStateImplCopyWith<$Res> {
+  __$$ChangeCreateTaskStateImplCopyWithImpl(_$ChangeCreateTaskStateImpl _value,
+      $Res Function(_$ChangeCreateTaskStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -349,7 +407,7 @@ class __$$ShowCreateTaskFormImplCopyWithImpl<$Res>
   $Res call({
     Object? isFormHidded = null,
   }) {
-    return _then(_$ShowCreateTaskFormImpl(
+    return _then(_$ChangeCreateTaskStateImpl(
       null == isFormHidded
           ? _value.isFormHidded
           : isFormHidded // ignore: cast_nullable_to_non_nullable
@@ -360,22 +418,22 @@ class __$$ShowCreateTaskFormImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ShowCreateTaskFormImpl implements ChangeCreateTaskState {
-  const _$ShowCreateTaskFormImpl(this.isFormHidded);
+class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
+  const _$ChangeCreateTaskStateImpl(this.isFormHidded);
 
   @override
   final bool isFormHidded;
 
   @override
   String toString() {
-    return 'HomeState.showCreateTaskForm(isFormHidded: $isFormHidded)';
+    return 'HomeState.changeCreateTaskState(isFormHidded: $isFormHidded)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ShowCreateTaskFormImpl &&
+            other is _$ChangeCreateTaskStateImpl &&
             (identical(other.isFormHidded, isFormHidded) ||
                 other.isFormHidded == isFormHidded));
   }
@@ -386,18 +444,21 @@ class _$ShowCreateTaskFormImpl implements ChangeCreateTaskState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ShowCreateTaskFormImplCopyWith<_$ShowCreateTaskFormImpl> get copyWith =>
-      __$$ShowCreateTaskFormImplCopyWithImpl<_$ShowCreateTaskFormImpl>(
-          this, _$identity);
+  _$$ChangeCreateTaskStateImplCopyWith<_$ChangeCreateTaskStateImpl>
+      get copyWith => __$$ChangeCreateTaskStateImplCopyWithImpl<
+          _$ChangeCreateTaskStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
-    required TResult Function(bool isFormHidded) showCreateTaskForm,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() loading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
   }) {
-    return showCreateTaskForm(isFormHidded);
+    return changeCreateTaskState(isFormHidded);
   }
 
   @override
@@ -405,9 +466,12 @@ class _$ShowCreateTaskFormImpl implements ChangeCreateTaskState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
-    TResult? Function(bool isFormHidded)? showCreateTaskForm,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? loading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
   }) {
-    return showCreateTaskForm?.call(isFormHidded);
+    return changeCreateTaskState?.call(isFormHidded);
   }
 
   @override
@@ -415,11 +479,14 @@ class _$ShowCreateTaskFormImpl implements ChangeCreateTaskState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
-    TResult Function(bool isFormHidded)? showCreateTaskForm,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? loading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
     required TResult orElse(),
   }) {
-    if (showCreateTaskForm != null) {
-      return showCreateTaskForm(isFormHidded);
+    if (changeCreateTaskState != null) {
+      return changeCreateTaskState(isFormHidded);
     }
     return orElse();
   }
@@ -429,9 +496,13 @@ class _$ShowCreateTaskFormImpl implements ChangeCreateTaskState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
-    required TResult Function(ChangeCreateTaskState value) showCreateTaskForm,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) loading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
   }) {
-    return showCreateTaskForm(this);
+    return changeCreateTaskState(this);
   }
 
   @override
@@ -439,9 +510,12 @@ class _$ShowCreateTaskFormImpl implements ChangeCreateTaskState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
-    TResult? Function(ChangeCreateTaskState value)? showCreateTaskForm,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? loading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
   }) {
-    return showCreateTaskForm?.call(this);
+    return changeCreateTaskState?.call(this);
   }
 
   @override
@@ -449,11 +523,14 @@ class _$ShowCreateTaskFormImpl implements ChangeCreateTaskState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
-    TResult Function(ChangeCreateTaskState value)? showCreateTaskForm,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? loading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
     required TResult orElse(),
   }) {
-    if (showCreateTaskForm != null) {
-      return showCreateTaskForm(this);
+    if (changeCreateTaskState != null) {
+      return changeCreateTaskState(this);
     }
     return orElse();
   }
@@ -461,10 +538,457 @@ class _$ShowCreateTaskFormImpl implements ChangeCreateTaskState {
 
 abstract class ChangeCreateTaskState implements HomeState {
   const factory ChangeCreateTaskState(final bool isFormHidded) =
-      _$ShowCreateTaskFormImpl;
+      _$ChangeCreateTaskStateImpl;
 
   bool get isFormHidded;
   @JsonKey(ignore: true)
-  _$$ShowCreateTaskFormImplCopyWith<_$ShowCreateTaskFormImpl> get copyWith =>
+  _$$ChangeCreateTaskStateImplCopyWith<_$ChangeCreateTaskStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadingImplCopyWith<$Res> {
+  factory _$$LoadingImplCopyWith(
+          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+      __$$LoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadingImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$LoadingImpl>
+    implements _$$LoadingImplCopyWith<$Res> {
+  __$$LoadingImplCopyWithImpl(
+      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadingImpl implements CreateTaskLoading {
+  const _$LoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.loading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() loading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? loading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? loading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) loading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? loading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? loading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateTaskLoading implements HomeState {
+  const factory CreateTaskLoading() = _$LoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$CreateTaskSuccessImplCopyWith<$Res> {
+  factory _$$CreateTaskSuccessImplCopyWith(_$CreateTaskSuccessImpl value,
+          $Res Function(_$CreateTaskSuccessImpl) then) =
+      __$$CreateTaskSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({TaskModel? task});
+}
+
+/// @nodoc
+class __$$CreateTaskSuccessImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$CreateTaskSuccessImpl>
+    implements _$$CreateTaskSuccessImplCopyWith<$Res> {
+  __$$CreateTaskSuccessImplCopyWithImpl(_$CreateTaskSuccessImpl _value,
+      $Res Function(_$CreateTaskSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? task = freezed,
+  }) {
+    return _then(_$CreateTaskSuccessImpl(
+      freezed == task
+          ? _value.task
+          : task // ignore: cast_nullable_to_non_nullable
+              as TaskModel?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
+  const _$CreateTaskSuccessImpl(this.task);
+
+  @override
+  final TaskModel? task;
+
+  @override
+  String toString() {
+    return 'HomeState.createTaskSuccess(task: $task)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateTaskSuccessImpl &&
+            (identical(other.task, task) || other.task == task));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, task);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateTaskSuccessImplCopyWith<_$CreateTaskSuccessImpl> get copyWith =>
+      __$$CreateTaskSuccessImplCopyWithImpl<_$CreateTaskSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() loading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
+  }) {
+    return createTaskSuccess(task);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? loading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
+  }) {
+    return createTaskSuccess?.call(task);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? loading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
+    required TResult orElse(),
+  }) {
+    if (createTaskSuccess != null) {
+      return createTaskSuccess(task);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) loading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
+  }) {
+    return createTaskSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? loading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
+  }) {
+    return createTaskSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? loading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
+    required TResult orElse(),
+  }) {
+    if (createTaskSuccess != null) {
+      return createTaskSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateTaskSuccess implements HomeState {
+  const factory CreateTaskSuccess(final TaskModel? task) =
+      _$CreateTaskSuccessImpl;
+
+  TaskModel? get task;
+  @JsonKey(ignore: true)
+  _$$CreateTaskSuccessImplCopyWith<_$CreateTaskSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CreateTaskFailureImplCopyWith<$Res> {
+  factory _$$CreateTaskFailureImplCopyWith(_$CreateTaskFailureImpl value,
+          $Res Function(_$CreateTaskFailureImpl) then) =
+      __$$CreateTaskFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$CreateTaskFailureImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$CreateTaskFailureImpl>
+    implements _$$CreateTaskFailureImplCopyWith<$Res> {
+  __$$CreateTaskFailureImplCopyWithImpl(_$CreateTaskFailureImpl _value,
+      $Res Function(_$CreateTaskFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$CreateTaskFailureImpl(
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CreateTaskFailureImpl implements CreateTaskFailure {
+  const _$CreateTaskFailureImpl(this.message);
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'HomeState.createTaskFailure(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateTaskFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateTaskFailureImplCopyWith<_$CreateTaskFailureImpl> get copyWith =>
+      __$$CreateTaskFailureImplCopyWithImpl<_$CreateTaskFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() loading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
+  }) {
+    return createTaskFailure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? loading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
+  }) {
+    return createTaskFailure?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? loading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
+    required TResult orElse(),
+  }) {
+    if (createTaskFailure != null) {
+      return createTaskFailure(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) loading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
+  }) {
+    return createTaskFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? loading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
+  }) {
+    return createTaskFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? loading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
+    required TResult orElse(),
+  }) {
+    if (createTaskFailure != null) {
+      return createTaskFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateTaskFailure implements HomeState {
+  const factory CreateTaskFailure(final String? message) =
+      _$CreateTaskFailureImpl;
+
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$CreateTaskFailureImplCopyWith<_$CreateTaskFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
