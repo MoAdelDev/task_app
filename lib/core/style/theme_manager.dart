@@ -60,12 +60,12 @@ class ThemeManager {
           bodyLarge: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.regular,
-            fontSize: 16.sp,
+            fontSize: 15.sp,
           ),
           bodyMedium: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.regular,
-            fontSize: 14.sp,
+            fontSize: 13.sp,
           ),
           bodySmall: TextStyle(
             color: ColorLightManager.onBackground,
