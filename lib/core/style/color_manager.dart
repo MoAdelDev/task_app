@@ -13,17 +13,3 @@ class ColorLightManager {
   static const Color onError = Color(0xFFFFFFFF);
   static const Color grey = Color(0xff717171);
 }
-
-class ColorDarkManager {
-  static const Color background = Color(0xFF242A32);
-  static const Color primary = Color(0xFF00CA5D);
-  static const Color secondary = Color(0xFF0B732F);
-  static const Color surface = Color(0xFF000000);
-  static const Color onBackground = Color(0xFFFFFFFF);
-  static const Color onPrimary = Color(0xFFFFFFFF);
-  static const Color onSecondary = Color(0xFFFFFFFF);
-  static const Color onSurface = Color(0xFFFFFFFF);
-  static const Color error = Color(0xFFF24E1E);
-  static const Color onError = Color(0xFFFFFFFF);
-  static const Color grey = Color(0xff717171);
-}
