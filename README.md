@@ -10,6 +10,12 @@ Simple Task Management App is a user-friendly Flutter mobile application that al
 - Offline functionality with automatic sync when online
 - Integration with Google Calendar
 
+## Design System
+
+![305585789-92fd36e2-e8e6-44d4-bcf5-0643e20df0a7](https://github.com/MoAdelDev/task_app/assets/57016916/c8ec7ebd-8a93-4ee0-a56b-14eb9b3771c9)
+
+
+
 ## Installation
 
 ### Prerequisites
@@ -17,3 +23,4 @@ Simple Task Management App is a user-friendly Flutter mobile application that al
 - Flutter SDK
 - Android Studio or Xcode (for iOS)
 - A Google Cloud project with Calendar API enabled
+
