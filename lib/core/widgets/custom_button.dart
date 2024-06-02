@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_app/core/helpers/extensions.dart';
+import 'package:task_app/core/style/font_weight_helper.dart';
 import 'package:task_app/core/widgets/custom_loading_indicator.dart';
 import 'package:task_app/core/widgets/custom_text.dart';
 
@@ -30,7 +31,7 @@ class CustomButton extends StatelessWidget {
     }
     return Container(
       width: isExpand ? double.infinity : width,
-      height: height ?? 40.h,
+      height: height ?? 47.h,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
@@ -47,8 +48,9 @@ class CustomButton extends StatelessWidget {
             ? child
             : CustomText(
                 text: label ?? '',
-                style: context.textTheme.titleMedium,
+                style: context.textTheme.bodyLarge,
                 color: Colors.white,
+                fontWeight: FontWeightHelper.bold,
               ),
       ),
     );
