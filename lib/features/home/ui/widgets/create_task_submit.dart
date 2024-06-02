@@ -15,6 +15,8 @@ class CreateTaskSubmit extends StatelessWidget {
           onPressed: () {
             if (cubit.isCreateTaskFormHidden) {
               cubit.emitChangeCreateTaskState(false);
+            } else {
+              cubit.emitSaveTaskState();
             }
           },
           label: cubit.isCreateTaskFormHidden ? 'Create Task' : 'Save Task',

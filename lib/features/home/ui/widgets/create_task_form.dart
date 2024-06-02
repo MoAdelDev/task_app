@@ -56,6 +56,9 @@ class CreateTaskForm extends StatelessWidget {
               keyboardType: TextInputType.text,
               readOnly: true,
               textInputAction: TextInputAction.next,
+              onTap: () {
+                cubit.emitSelectDueDateState(context);
+              },
             ),
             verticalSpace(30),
           ],
