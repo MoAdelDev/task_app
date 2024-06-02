@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/core/helpers/extensions.dart';
 import 'package:task_app/core/helpers/spacing.dart';
+import 'package:task_app/core/style/font_weight_helper.dart';
 import 'package:task_app/core/widgets/custom_tap.dart';
 import 'package:task_app/core/widgets/custom_text.dart';
 
@@ -81,14 +82,16 @@ class CustomTextField extends StatelessWidget {
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12.0),
-              borderSide: BorderSide(color: Colors.grey[400]!),
+              borderSide: const BorderSide(
+                color: Colors.transparent,
+              ),
             ),
             fillColor: const Color(0xffF7F8F9),
             filled: true,
             hintText: hintText,
             alignLabelWithHint: true,
-            hintStyle: TextStyle(
-              fontSize: 14.0,
+            hintStyle: context.textTheme.bodySmall?.copyWith(
+              fontWeight: FontWeightHelper.regular,
               color: context.colorScheme.outlineVariant,
             ),
             suffixIcon: CustomTap(

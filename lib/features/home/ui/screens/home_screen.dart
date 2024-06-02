@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
+        bottom: false,
         child: HomeBody(),
       ),
     );

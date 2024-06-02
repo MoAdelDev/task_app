@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/core/widgets/custom_button.dart';
 
-class AddTaskButton extends StatelessWidget {
-  const AddTaskButton({super.key});
+class CreateTaskSubmit extends StatelessWidget {
+  const CreateTaskSubmit({super.key});
 
   @override
   Widget build(BuildContext context) {

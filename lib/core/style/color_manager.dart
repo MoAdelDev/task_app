@@ -13,6 +13,6 @@ class ColorLightManager {
   static const Color onSurface = Color(0xFF000000);
   static const Color error = Color(0xFFF24E1E);
   static const Color onError = Color(0xFFFFFFFF);
-  static const Color grey = Color(0xff717171);
+  static Color grey = const Color(0xff000000).withOpacity(0.5);
   static Color shadowColor = const Color(0xff000000).withOpacity(0.85);
 }
