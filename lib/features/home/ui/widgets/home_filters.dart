@@ -14,7 +14,7 @@ class HomeFilters extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => HomeFilterTile(
           onTap: () {},
-          isSelected: false,
+          isSelected: true,
           label: 'All',
         ),
         separatorBuilder: (context, index) => horizontalSpace(5),
