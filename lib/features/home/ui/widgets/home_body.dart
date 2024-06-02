@@ -14,20 +14,22 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomTap(
-      onTap: () {
-        // Hide create task form
-        context.read<HomeCubit>().emitChangeCreateTaskState(true);
-      },
-      child: Padding(
-        padding: EdgeInsets.only(
-          left: 10.w,
-          right: 10.w,
-          top: 10.h,
-        ),
-        child: Column(
-          children: [
-            Expanded(
+    return Padding(
+      padding: EdgeInsets.only(
+        left: 10.w,
+        right: 10.w,
+        top: 10.h,
+      ),
+      child: Column(
+        children: [
+          Expanded(
+            child: CustomTap(
+              onTap: () {
+                // Hide create task form
+                if (!context.read<HomeCubit>().isCreateTaskFormHidden) {
+                  context.read<HomeCubit>().emitChangeCreateTaskState(true);
+                }
+              },
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.w),
                 child: Column(
@@ -44,10 +46,10 @@ class HomeBody extends StatelessWidget {
                 ),
               ),
             ),
-            verticalSpace(10),
-            const CreateTaskButtonWithForm(),
-          ],
-        ),
+          ),
+          verticalSpace(10),
+          const CreateTaskButtonWithForm(),
+        ],
       ),
     );
   }

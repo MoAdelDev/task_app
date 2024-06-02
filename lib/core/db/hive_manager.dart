@@ -7,6 +7,6 @@ class HiveManager {
   static Future<void> init() async {
     await Hive.initFlutter();
     Hive.registerAdapter<TaskModel>(TaskModelAdapter());
-    Hive.openBox<TaskModel>(kTasksBox);
+    await Hive.openBox<TaskModel>(kTasksBox);
   }
 }

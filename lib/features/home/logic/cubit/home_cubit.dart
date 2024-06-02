@@ -4,13 +4,18 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:intl/intl.dart';
 import 'package:task_app/features/home/data/models/task_model.dart';
 import 'package:task_app/features/home/data/repos/create_task_repo.dart';
+import 'package:task_app/features/home/data/repos/get_tasks_repo.dart';
 
 part 'home_cubit.freezed.dart';
 part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   final CreateTaskRepo _createTaskRepo;
-  HomeCubit(this._createTaskRepo) : super(const HomeState.initial());
+  final GetTasksRepo _getTasksRepo;
+  HomeCubit(
+    this._createTaskRepo,
+    this._getTasksRepo,
+  ) : super(const HomeState.initial());
 
   List<String> filters = [
     'All',
@@ -62,23 +67,43 @@ class HomeCubit extends Cubit<HomeState> {
       final result = await _createTaskRepo.createTask(taskModel);
       isLoading = false;
       result.when(
-        success: emitCreateTaskSuccess,
-        failure: emitCreateTaskFailure,
+        success: _emitCreateTaskSuccess,
+        failure: _emitCreateTaskFailure,
       );
     }
   }
 
-  void emitCreateTaskSuccess(TaskModel? taskModel) {
+  void _emitCreateTaskSuccess(TaskModel? taskModel) {
+    if (taskModel != null) originalTasks.add(taskModel);
     emit(HomeState.createTaskSuccess(taskModel));
-    clearControllers();
+    _clearControllers();
     emitChangeCreateTaskState(true);
   }
 
-  void emitCreateTaskFailure(String? message) =>
+  void _emitCreateTaskFailure(String? message) =>
       emit(HomeState.createTaskFailure(message));
 
-  void clearControllers() {
+  void _clearControllers() {
     taskTitleController.text = '';
     dueDateController.text = '';
+  }
+
+  List<TaskModel> originalTasks = [];
+  void emitGetTasksState() async {
+    emit(const HomeState.getTasksLoading());
+    final result = await _getTasksRepo.getTasks();
+    result.when(
+      success: _emitGetTasksSuccessState,
+      failure: _emitGetTasksFailureState,
+    );
+  }
+
+  void _emitGetTasksSuccessState(List<TaskModel>? tasks) {
+    originalTasks = tasks ?? [];
+    emit(HomeState.getTasksSuccess(tasks));
+  }
+
+  void _emitGetTasksFailureState(String? message) {
+    emit(HomeState.getTasksFailure(message));
   }
 }

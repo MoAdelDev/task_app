@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:task_app/core/helpers/extensions.dart';
 import 'package:task_app/core/helpers/spacing.dart';
 import 'package:task_app/core/style/color_manager.dart';
 import 'package:task_app/core/style/font_weight_helper.dart';
 import 'package:task_app/core/widgets/custom_text.dart';
+import 'package:task_app/features/home/data/models/task_model.dart';
 
 class HomeTaskTile extends StatelessWidget {
-  const HomeTaskTile({super.key});
+  final TaskModel task;
+  const HomeTaskTile({super.key, required this.task});
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +28,13 @@ class HomeTaskTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomText(
-                    text: 'Build Ui Android',
+                    text: task.title,
                     style: context.textTheme.bodyLarge,
                     fontWeight: FontWeightHelper.bold,
                   ),
                   verticalSpace(5),
                   CustomText(
-                    text: 'Due Date: Mon. 21/3/2024',
+                    text: task.dueDate,
                     style: context.textTheme.bodySmall,
                     fontWeight: FontWeightHelper.regular,
                   ),
@@ -46,14 +47,20 @@ class HomeTaskTile extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 13,
-                  backgroundColor: ColorLightManager.primaryLight,
+                  backgroundColor: task.isDone
+                      ? ColorLightManager.primaryLight
+                      : ColorLightManager.primaryExtraLight,
                 ),
                 Positioned(
                   top: -6.h,
                   bottom: 0,
-                  right: 0,
-                  child: SvgPicture.asset(
-                    'assets/svgs/check.svg',
+                  right: -5.w,
+                  child: Icon(
+                    Icons.check,
+                    color: task.isDone
+                        ? ColorLightManager.primary
+                        : ColorLightManager.primaryLight,
+                    size: 27,
                   ),
                 ),
               ],

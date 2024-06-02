@@ -11,7 +11,7 @@ class RouteManager {
       case Routes.home:
         return _getMaterialPageRoute(
           BlocProvider(
-            create: (context) => getIt<HomeCubit>(),
+            create: (context) => getIt<HomeCubit>()..emitGetTasksState(),
             child: const HomeScreen(),
           ),
         );
