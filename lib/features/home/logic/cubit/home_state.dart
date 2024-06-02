@@ -23,4 +23,12 @@ class HomeState with _$HomeState {
       GetTasksSuccess;
 
   const factory HomeState.getTasksFailure(String? message) = GetTasksFailure;
+
+  const factory HomeState.updateTasksLoading() = UpdateTasksLoading;
+
+  const factory HomeState.updateTasksSuccess(TaskModel task) =
+      UpdateTasksSuccess;
+
+  const factory HomeState.updateTasksFailure(String? message) =
+      UpdateTasksFailure;
 }

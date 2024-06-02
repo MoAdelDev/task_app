@@ -27,6 +27,9 @@ mixin _$HomeState {
     required TResult Function() getTasksLoading,
     required TResult Function(List<TaskModel>? task) getTasksSuccess,
     required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,6 +43,9 @@ mixin _$HomeState {
     TResult? Function()? getTasksLoading,
     TResult? Function(List<TaskModel>? task)? getTasksSuccess,
     TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -53,6 +59,9 @@ mixin _$HomeState {
     TResult Function()? getTasksLoading,
     TResult Function(List<TaskModel>? task)? getTasksSuccess,
     TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -68,6 +77,9 @@ mixin _$HomeState {
     required TResult Function(GetTasksLoading value) getTasksLoading,
     required TResult Function(GetTasksSuccess value) getTasksSuccess,
     required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +93,9 @@ mixin _$HomeState {
     TResult? Function(GetTasksLoading value)? getTasksLoading,
     TResult? Function(GetTasksSuccess value)? getTasksSuccess,
     TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -94,6 +109,9 @@ mixin _$HomeState {
     TResult Function(GetTasksLoading value)? getTasksLoading,
     TResult Function(GetTasksSuccess value)? getTasksSuccess,
     TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -163,6 +181,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() getTasksLoading,
     required TResult Function(List<TaskModel>? task) getTasksSuccess,
     required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
   }) {
     return initial();
   }
@@ -179,6 +200,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? getTasksLoading,
     TResult? Function(List<TaskModel>? task)? getTasksSuccess,
     TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
   }) {
     return initial?.call();
   }
@@ -195,6 +219,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? getTasksLoading,
     TResult Function(List<TaskModel>? task)? getTasksSuccess,
     TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -216,6 +243,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(GetTasksLoading value) getTasksLoading,
     required TResult Function(GetTasksSuccess value) getTasksSuccess,
     required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
   }) {
     return initial(this);
   }
@@ -232,6 +262,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(GetTasksLoading value)? getTasksLoading,
     TResult? Function(GetTasksSuccess value)? getTasksSuccess,
     TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
   }) {
     return initial?.call(this);
   }
@@ -248,6 +281,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(GetTasksLoading value)? getTasksLoading,
     TResult Function(GetTasksSuccess value)? getTasksSuccess,
     TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -335,6 +371,9 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     required TResult Function() getTasksLoading,
     required TResult Function(List<TaskModel>? task) getTasksSuccess,
     required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
   }) {
     return selectTaskFilter(index);
   }
@@ -351,6 +390,9 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     TResult? Function()? getTasksLoading,
     TResult? Function(List<TaskModel>? task)? getTasksSuccess,
     TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
   }) {
     return selectTaskFilter?.call(index);
   }
@@ -367,6 +409,9 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     TResult Function()? getTasksLoading,
     TResult Function(List<TaskModel>? task)? getTasksSuccess,
     TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (selectTaskFilter != null) {
@@ -388,6 +433,9 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     required TResult Function(GetTasksLoading value) getTasksLoading,
     required TResult Function(GetTasksSuccess value) getTasksSuccess,
     required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
   }) {
     return selectTaskFilter(this);
   }
@@ -404,6 +452,9 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     TResult? Function(GetTasksLoading value)? getTasksLoading,
     TResult? Function(GetTasksSuccess value)? getTasksSuccess,
     TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
   }) {
     return selectTaskFilter?.call(this);
   }
@@ -420,6 +471,9 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     TResult Function(GetTasksLoading value)? getTasksLoading,
     TResult Function(GetTasksSuccess value)? getTasksSuccess,
     TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (selectTaskFilter != null) {
@@ -514,6 +568,9 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     required TResult Function() getTasksLoading,
     required TResult Function(List<TaskModel>? task) getTasksSuccess,
     required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
   }) {
     return changeCreateTaskState(isFormHidded);
   }
@@ -530,6 +587,9 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     TResult? Function()? getTasksLoading,
     TResult? Function(List<TaskModel>? task)? getTasksSuccess,
     TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
   }) {
     return changeCreateTaskState?.call(isFormHidded);
   }
@@ -546,6 +606,9 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     TResult Function()? getTasksLoading,
     TResult Function(List<TaskModel>? task)? getTasksSuccess,
     TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (changeCreateTaskState != null) {
@@ -567,6 +630,9 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     required TResult Function(GetTasksLoading value) getTasksLoading,
     required TResult Function(GetTasksSuccess value) getTasksSuccess,
     required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
   }) {
     return changeCreateTaskState(this);
   }
@@ -583,6 +649,9 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     TResult? Function(GetTasksLoading value)? getTasksLoading,
     TResult? Function(GetTasksSuccess value)? getTasksSuccess,
     TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
   }) {
     return changeCreateTaskState?.call(this);
   }
@@ -599,6 +668,9 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     TResult Function(GetTasksLoading value)? getTasksLoading,
     TResult Function(GetTasksSuccess value)? getTasksSuccess,
     TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (changeCreateTaskState != null) {
@@ -665,6 +737,9 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     required TResult Function() getTasksLoading,
     required TResult Function(List<TaskModel>? task) getTasksSuccess,
     required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
   }) {
     return createTaskLoading();
   }
@@ -681,6 +756,9 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     TResult? Function()? getTasksLoading,
     TResult? Function(List<TaskModel>? task)? getTasksSuccess,
     TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
   }) {
     return createTaskLoading?.call();
   }
@@ -697,6 +775,9 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     TResult Function()? getTasksLoading,
     TResult Function(List<TaskModel>? task)? getTasksSuccess,
     TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (createTaskLoading != null) {
@@ -718,6 +799,9 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     required TResult Function(GetTasksLoading value) getTasksLoading,
     required TResult Function(GetTasksSuccess value) getTasksSuccess,
     required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
   }) {
     return createTaskLoading(this);
   }
@@ -734,6 +818,9 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     TResult? Function(GetTasksLoading value)? getTasksLoading,
     TResult? Function(GetTasksSuccess value)? getTasksSuccess,
     TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
   }) {
     return createTaskLoading?.call(this);
   }
@@ -750,6 +837,9 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     TResult Function(GetTasksLoading value)? getTasksLoading,
     TResult Function(GetTasksSuccess value)? getTasksSuccess,
     TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (createTaskLoading != null) {
@@ -837,6 +927,9 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     required TResult Function() getTasksLoading,
     required TResult Function(List<TaskModel>? task) getTasksSuccess,
     required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
   }) {
     return createTaskSuccess(task);
   }
@@ -853,6 +946,9 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     TResult? Function()? getTasksLoading,
     TResult? Function(List<TaskModel>? task)? getTasksSuccess,
     TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
   }) {
     return createTaskSuccess?.call(task);
   }
@@ -869,6 +965,9 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     TResult Function()? getTasksLoading,
     TResult Function(List<TaskModel>? task)? getTasksSuccess,
     TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (createTaskSuccess != null) {
@@ -890,6 +989,9 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     required TResult Function(GetTasksLoading value) getTasksLoading,
     required TResult Function(GetTasksSuccess value) getTasksSuccess,
     required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
   }) {
     return createTaskSuccess(this);
   }
@@ -906,6 +1008,9 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     TResult? Function(GetTasksLoading value)? getTasksLoading,
     TResult? Function(GetTasksSuccess value)? getTasksSuccess,
     TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
   }) {
     return createTaskSuccess?.call(this);
   }
@@ -922,6 +1027,9 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     TResult Function(GetTasksLoading value)? getTasksLoading,
     TResult Function(GetTasksSuccess value)? getTasksSuccess,
     TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (createTaskSuccess != null) {
@@ -1015,6 +1123,9 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     required TResult Function() getTasksLoading,
     required TResult Function(List<TaskModel>? task) getTasksSuccess,
     required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
   }) {
     return createTaskFailure(message);
   }
@@ -1031,6 +1142,9 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     TResult? Function()? getTasksLoading,
     TResult? Function(List<TaskModel>? task)? getTasksSuccess,
     TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
   }) {
     return createTaskFailure?.call(message);
   }
@@ -1047,6 +1161,9 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     TResult Function()? getTasksLoading,
     TResult Function(List<TaskModel>? task)? getTasksSuccess,
     TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (createTaskFailure != null) {
@@ -1068,6 +1185,9 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     required TResult Function(GetTasksLoading value) getTasksLoading,
     required TResult Function(GetTasksSuccess value) getTasksSuccess,
     required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
   }) {
     return createTaskFailure(this);
   }
@@ -1084,6 +1204,9 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     TResult? Function(GetTasksLoading value)? getTasksLoading,
     TResult? Function(GetTasksSuccess value)? getTasksSuccess,
     TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
   }) {
     return createTaskFailure?.call(this);
   }
@@ -1100,6 +1223,9 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     TResult Function(GetTasksLoading value)? getTasksLoading,
     TResult Function(GetTasksSuccess value)? getTasksSuccess,
     TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (createTaskFailure != null) {
@@ -1166,6 +1292,9 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     required TResult Function() getTasksLoading,
     required TResult Function(List<TaskModel>? task) getTasksSuccess,
     required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
   }) {
     return getTasksLoading();
   }
@@ -1182,6 +1311,9 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     TResult? Function()? getTasksLoading,
     TResult? Function(List<TaskModel>? task)? getTasksSuccess,
     TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
   }) {
     return getTasksLoading?.call();
   }
@@ -1198,6 +1330,9 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     TResult Function()? getTasksLoading,
     TResult Function(List<TaskModel>? task)? getTasksSuccess,
     TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (getTasksLoading != null) {
@@ -1219,6 +1354,9 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     required TResult Function(GetTasksLoading value) getTasksLoading,
     required TResult Function(GetTasksSuccess value) getTasksSuccess,
     required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
   }) {
     return getTasksLoading(this);
   }
@@ -1235,6 +1373,9 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     TResult? Function(GetTasksLoading value)? getTasksLoading,
     TResult? Function(GetTasksSuccess value)? getTasksSuccess,
     TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
   }) {
     return getTasksLoading?.call(this);
   }
@@ -1251,6 +1392,9 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     TResult Function(GetTasksLoading value)? getTasksLoading,
     TResult Function(GetTasksSuccess value)? getTasksSuccess,
     TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (getTasksLoading != null) {
@@ -1346,6 +1490,9 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     required TResult Function() getTasksLoading,
     required TResult Function(List<TaskModel>? task) getTasksSuccess,
     required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
   }) {
     return getTasksSuccess(task);
   }
@@ -1362,6 +1509,9 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     TResult? Function()? getTasksLoading,
     TResult? Function(List<TaskModel>? task)? getTasksSuccess,
     TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
   }) {
     return getTasksSuccess?.call(task);
   }
@@ -1378,6 +1528,9 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     TResult Function()? getTasksLoading,
     TResult Function(List<TaskModel>? task)? getTasksSuccess,
     TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (getTasksSuccess != null) {
@@ -1399,6 +1552,9 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     required TResult Function(GetTasksLoading value) getTasksLoading,
     required TResult Function(GetTasksSuccess value) getTasksSuccess,
     required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
   }) {
     return getTasksSuccess(this);
   }
@@ -1415,6 +1571,9 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     TResult? Function(GetTasksLoading value)? getTasksLoading,
     TResult? Function(GetTasksSuccess value)? getTasksSuccess,
     TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
   }) {
     return getTasksSuccess?.call(this);
   }
@@ -1431,6 +1590,9 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     TResult Function(GetTasksLoading value)? getTasksLoading,
     TResult Function(GetTasksSuccess value)? getTasksSuccess,
     TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (getTasksSuccess != null) {
@@ -1524,6 +1686,9 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     required TResult Function() getTasksLoading,
     required TResult Function(List<TaskModel>? task) getTasksSuccess,
     required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
   }) {
     return getTasksFailure(message);
   }
@@ -1540,6 +1705,9 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     TResult? Function()? getTasksLoading,
     TResult? Function(List<TaskModel>? task)? getTasksSuccess,
     TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
   }) {
     return getTasksFailure?.call(message);
   }
@@ -1556,6 +1724,9 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     TResult Function()? getTasksLoading,
     TResult Function(List<TaskModel>? task)? getTasksSuccess,
     TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (getTasksFailure != null) {
@@ -1577,6 +1748,9 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     required TResult Function(GetTasksLoading value) getTasksLoading,
     required TResult Function(GetTasksSuccess value) getTasksSuccess,
     required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
   }) {
     return getTasksFailure(this);
   }
@@ -1593,6 +1767,9 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     TResult? Function(GetTasksLoading value)? getTasksLoading,
     TResult? Function(GetTasksSuccess value)? getTasksSuccess,
     TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
   }) {
     return getTasksFailure?.call(this);
   }
@@ -1609,6 +1786,9 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     TResult Function(GetTasksLoading value)? getTasksLoading,
     TResult Function(GetTasksSuccess value)? getTasksSuccess,
     TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
     required TResult orElse(),
   }) {
     if (getTasksFailure != null) {
@@ -1624,5 +1804,560 @@ abstract class GetTasksFailure implements HomeState {
   String? get message;
   @JsonKey(ignore: true)
   _$$GetTasksFailureImplCopyWith<_$GetTasksFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateTasksLoadingImplCopyWith<$Res> {
+  factory _$$UpdateTasksLoadingImplCopyWith(_$UpdateTasksLoadingImpl value,
+          $Res Function(_$UpdateTasksLoadingImpl) then) =
+      __$$UpdateTasksLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdateTasksLoadingImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$UpdateTasksLoadingImpl>
+    implements _$$UpdateTasksLoadingImplCopyWith<$Res> {
+  __$$UpdateTasksLoadingImplCopyWithImpl(_$UpdateTasksLoadingImpl _value,
+      $Res Function(_$UpdateTasksLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
+  const _$UpdateTasksLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.updateTasksLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdateTasksLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() createTaskLoading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
+    required TResult Function() getTasksLoading,
+    required TResult Function(List<TaskModel>? task) getTasksSuccess,
+    required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
+  }) {
+    return updateTasksLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? createTaskLoading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
+    TResult? Function()? getTasksLoading,
+    TResult? Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
+  }) {
+    return updateTasksLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? createTaskLoading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
+    TResult Function()? getTasksLoading,
+    TResult Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (updateTasksLoading != null) {
+      return updateTasksLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) createTaskLoading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
+    required TResult Function(GetTasksLoading value) getTasksLoading,
+    required TResult Function(GetTasksSuccess value) getTasksSuccess,
+    required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+  }) {
+    return updateTasksLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? createTaskLoading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
+    TResult? Function(GetTasksLoading value)? getTasksLoading,
+    TResult? Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+  }) {
+    return updateTasksLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? createTaskLoading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
+    TResult Function(GetTasksLoading value)? getTasksLoading,
+    TResult Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (updateTasksLoading != null) {
+      return updateTasksLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateTasksLoading implements HomeState {
+  const factory UpdateTasksLoading() = _$UpdateTasksLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdateTasksSuccessImplCopyWith<$Res> {
+  factory _$$UpdateTasksSuccessImplCopyWith(_$UpdateTasksSuccessImpl value,
+          $Res Function(_$UpdateTasksSuccessImpl) then) =
+      __$$UpdateTasksSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({TaskModel task});
+}
+
+/// @nodoc
+class __$$UpdateTasksSuccessImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$UpdateTasksSuccessImpl>
+    implements _$$UpdateTasksSuccessImplCopyWith<$Res> {
+  __$$UpdateTasksSuccessImplCopyWithImpl(_$UpdateTasksSuccessImpl _value,
+      $Res Function(_$UpdateTasksSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? task = null,
+  }) {
+    return _then(_$UpdateTasksSuccessImpl(
+      null == task
+          ? _value.task
+          : task // ignore: cast_nullable_to_non_nullable
+              as TaskModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
+  const _$UpdateTasksSuccessImpl(this.task);
+
+  @override
+  final TaskModel task;
+
+  @override
+  String toString() {
+    return 'HomeState.updateTasksSuccess(task: $task)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateTasksSuccessImpl &&
+            (identical(other.task, task) || other.task == task));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, task);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateTasksSuccessImplCopyWith<_$UpdateTasksSuccessImpl> get copyWith =>
+      __$$UpdateTasksSuccessImplCopyWithImpl<_$UpdateTasksSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() createTaskLoading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
+    required TResult Function() getTasksLoading,
+    required TResult Function(List<TaskModel>? task) getTasksSuccess,
+    required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
+  }) {
+    return updateTasksSuccess(task);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? createTaskLoading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
+    TResult? Function()? getTasksLoading,
+    TResult? Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
+  }) {
+    return updateTasksSuccess?.call(task);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? createTaskLoading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
+    TResult Function()? getTasksLoading,
+    TResult Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (updateTasksSuccess != null) {
+      return updateTasksSuccess(task);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) createTaskLoading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
+    required TResult Function(GetTasksLoading value) getTasksLoading,
+    required TResult Function(GetTasksSuccess value) getTasksSuccess,
+    required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+  }) {
+    return updateTasksSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? createTaskLoading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
+    TResult? Function(GetTasksLoading value)? getTasksLoading,
+    TResult? Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+  }) {
+    return updateTasksSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? createTaskLoading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
+    TResult Function(GetTasksLoading value)? getTasksLoading,
+    TResult Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (updateTasksSuccess != null) {
+      return updateTasksSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateTasksSuccess implements HomeState {
+  const factory UpdateTasksSuccess(final TaskModel task) =
+      _$UpdateTasksSuccessImpl;
+
+  TaskModel get task;
+  @JsonKey(ignore: true)
+  _$$UpdateTasksSuccessImplCopyWith<_$UpdateTasksSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateTasksFailureImplCopyWith<$Res> {
+  factory _$$UpdateTasksFailureImplCopyWith(_$UpdateTasksFailureImpl value,
+          $Res Function(_$UpdateTasksFailureImpl) then) =
+      __$$UpdateTasksFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$UpdateTasksFailureImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$UpdateTasksFailureImpl>
+    implements _$$UpdateTasksFailureImplCopyWith<$Res> {
+  __$$UpdateTasksFailureImplCopyWithImpl(_$UpdateTasksFailureImpl _value,
+      $Res Function(_$UpdateTasksFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$UpdateTasksFailureImpl(
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
+  const _$UpdateTasksFailureImpl(this.message);
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'HomeState.updateTasksFailure(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateTasksFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateTasksFailureImplCopyWith<_$UpdateTasksFailureImpl> get copyWith =>
+      __$$UpdateTasksFailureImplCopyWithImpl<_$UpdateTasksFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() createTaskLoading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
+    required TResult Function() getTasksLoading,
+    required TResult Function(List<TaskModel>? task) getTasksSuccess,
+    required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
+  }) {
+    return updateTasksFailure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? createTaskLoading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
+    TResult? Function()? getTasksLoading,
+    TResult? Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
+  }) {
+    return updateTasksFailure?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? createTaskLoading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
+    TResult Function()? getTasksLoading,
+    TResult Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (updateTasksFailure != null) {
+      return updateTasksFailure(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) createTaskLoading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
+    required TResult Function(GetTasksLoading value) getTasksLoading,
+    required TResult Function(GetTasksSuccess value) getTasksSuccess,
+    required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+  }) {
+    return updateTasksFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? createTaskLoading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
+    TResult? Function(GetTasksLoading value)? getTasksLoading,
+    TResult? Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+  }) {
+    return updateTasksFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? createTaskLoading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
+    TResult Function(GetTasksLoading value)? getTasksLoading,
+    TResult Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (updateTasksFailure != null) {
+      return updateTasksFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateTasksFailure implements HomeState {
+  const factory UpdateTasksFailure(final String? message) =
+      _$UpdateTasksFailureImpl;
+
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$UpdateTasksFailureImplCopyWith<_$UpdateTasksFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

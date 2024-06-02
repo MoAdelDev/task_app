@@ -7,11 +7,11 @@ part 'task_model.g.dart';
 @HiveType(typeId: 0)
 class TaskModel {
   @HiveField(0)
-  final String title;
+  String title;
   @HiveField(1)
-  final String dueDate;
+  String dueDate;
   @HiveField(2)
-  final bool isDone;
+  bool isDone;
 
   TaskModel({required this.title, required this.dueDate, required this.isDone});
 

@@ -6,7 +6,8 @@ import 'package:task_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:task_app/features/home/ui/widgets/task_options_bottom_sheet.dart';
 
 class TaskMoreButton extends StatelessWidget {
-  const TaskMoreButton({super.key});
+  final int index;
+  const TaskMoreButton({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,9 @@ class TaskMoreButton extends StatelessWidget {
           builder: (_) {
             return BlocProvider<HomeCubit>.value(
               value: context.read(),
-              child: const TaskOptionsBottomSheet(),
+              child: TaskOptionsBottomSheet(
+                index: index,
+              ),
             );
           },
         );

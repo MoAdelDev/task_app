@@ -12,7 +12,8 @@ import 'package:task_app/features/home/ui/widgets/task_title_and_due_date_text.d
 
 class HomeTaskTile extends StatelessWidget {
   final TaskModel task;
-  const HomeTaskTile({super.key, required this.task});
+  final int index;
+  const HomeTaskTile({super.key, required this.task, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,9 @@ class HomeTaskTile extends StatelessWidget {
           builder: (_) {
             return BlocProvider<HomeCubit>.value(
               value: context.read(),
-              child: const TaskOptionsBottomSheet(),
+              child: TaskOptionsBottomSheet(
+                index: index,
+              ),
             );
           },
         );
@@ -44,7 +47,9 @@ class HomeTaskTile extends StatelessWidget {
                 ),
               ),
               horizontalSpace(5),
-              const TaskMoreButton(),
+              TaskMoreButton(
+                index: index,
+              ),
               horizontalSpace(5),
               TaskDoneIcon(
                 isDone: task.isDone,

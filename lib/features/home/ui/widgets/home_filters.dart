@@ -22,7 +22,7 @@ class HomeFilters extends StatelessWidget {
                 cubit.emitSelectFilterState(index);
               },
               isSelected: cubit.selectedFilterIndex == index,
-              label: cubit.filters[index],
+              label: cubit.filters[index].label,
             ),
             separatorBuilder: (context, index) => horizontalSpace(5),
             itemCount: cubit.filters.length,
