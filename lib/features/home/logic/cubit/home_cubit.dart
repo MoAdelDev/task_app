@@ -153,12 +153,13 @@ class HomeCubit extends Cubit<HomeState> {
   void emitUpdateTaskState() async {
     emit(const HomeState.updateTasksLoading());
     final result = await _tasksActionsRepo.updateTask(
-        TaskModel(
-          title: taskTitleController.text,
-          dueDate: dueDateController.text,
-          isDone: allTasks[taskIndexWhichUpdate!].isDone,
-        ),
-        taskIndexWhichUpdate!);
+      TaskModel(
+        title: taskTitleController.text,
+        dueDate: dueDateController.text,
+        isDone: allTasks[taskIndexWhichUpdate!].isDone,
+      ),
+      taskIndexWhichUpdate!,
+    );
 
     result.when(
       success: (data) =>
@@ -170,12 +171,29 @@ class HomeCubit extends Cubit<HomeState> {
 
   void _emitUpdateTaskStatusSuccessState(TaskModel? task, int index) {
     if (task == null) return;
-    originalTasks[index] = task;
     allTasks[index] = task;
     emit(HomeState.updateTasksSuccess(task));
   }
 
   void _emitUpdateTaskFailureState(String? message) {
     emit(HomeState.updateTasksFailure(message));
+  }
+
+  void emitDeleteTaskState(int index) async {
+    emit(const HomeState.deleteTasksLoading());
+    final result = await _tasksActionsRepo.deleteTask(index);
+    result.when(
+      success: _emitDeleteTaskSucess,
+      failure: _emitDeletetaskFailure,
+    );
+  }
+
+  void _emitDeleteTaskSucess(int? index) {
+    allTasks.removeAt(index!);
+    emit(HomeState.deleteTasksSuccess(index));
+  }
+
+  void _emitDeletetaskFailure(String? message) {
+    emit(HomeState.deleteTasksFailure(message));
   }
 }

@@ -31,4 +31,11 @@ class HomeState with _$HomeState {
 
   const factory HomeState.updateTasksFailure(String? message) =
       UpdateTasksFailure;
+
+  const factory HomeState.deleteTasksLoading() = DeleteTasksLoading;
+
+  const factory HomeState.deleteTasksSuccess(int index) = DeleteTasksSuccess;
+
+  const factory HomeState.deleteTasksFailure(String? message) =
+      DeleteTasksFailure;
 }

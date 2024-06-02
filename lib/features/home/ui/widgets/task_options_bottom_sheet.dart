@@ -5,6 +5,7 @@ import 'package:task_app/core/helpers/extensions.dart';
 import 'package:task_app/core/helpers/spacing.dart';
 import 'package:task_app/core/helpers/toasts.dart';
 import 'package:task_app/core/widgets/custom_button.dart';
+import 'package:task_app/core/widgets/custom_text.dart';
 import 'package:task_app/features/home/logic/cubit/home_cubit.dart';
 
 class TaskOptionsBottomSheet extends StatelessWidget {
@@ -24,6 +25,19 @@ class TaskOptionsBottomSheet extends StatelessWidget {
           updateTasksFailure: (message) {
             showToast(
               'Failed to update task, try again',
+              isError: true,
+            );
+          },
+          deleteTasksSuccess: (task) {
+            showToast('Task Deleted Successfully');
+            // For Alert Dialog
+            context.pop();
+            // For Bottom Sheet Actions
+            context.pop();
+          },
+          deleteTasksFailure: (message) {
+            showToast(
+              'Failed to delete task, try again',
               isError: true,
             );
           },
@@ -73,7 +87,59 @@ class TaskOptionsBottomSheet extends StatelessWidget {
             ),
             verticalSpace(20),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: CustomText(
+                        text: 'Delete Task',
+                        style: context.textTheme.titleSmall,
+                        textAlign: TextAlign.start,
+                      ),
+                      content: CustomText(
+                        text: 'Are you want to delete this task ?',
+                        style: context.textTheme.bodyMedium,
+                        textAlign: TextAlign.start,
+                      ),
+                      actionsPadding: EdgeInsets.symmetric(
+                        horizontal: 10.w,
+                        vertical: 5.h,
+                      ),
+                      actions: [
+                        Row(
+                          children: [
+                            Expanded(
+                              child: CustomButton(
+                                height: 30.h,
+                                onPressed: () {
+                                  cubit.emitDeleteTaskState(index);
+                                },
+                                label: 'Delete',
+                                backgroundColor: context.colorScheme.error,
+                              ),
+                            ),
+                            horizontalSpace(5),
+                            Expanded(
+                              child: CustomButton(
+                                height: 30.h,
+                                onPressed: () {
+                                  context.pop();
+                                },
+                                label: 'Cancel',
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                      actionsAlignment: MainAxisAlignment.center,
+                      actionsOverflowDirection: VerticalDirection.down,
+                      actionsOverflowAlignment: OverflowBarAlignment.start,
+                      actionsOverflowButtonSpacing: 3,
+                    );
+                  },
+                );
+              },
               label: 'Delete Task',
               height: 40.h,
               backgroundColor: context.colorScheme.error,

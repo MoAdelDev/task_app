@@ -30,4 +30,16 @@ class TasksActionsRepo {
       return DbResult.failure(e.message);
     }
   }
+
+  Future<DbResult<int>> deleteTask(
+    int index,
+  ) async {
+    try {
+      final tasksBox = Hive.box<TaskModel>(kTasksBox);
+      await tasksBox.deleteAt(index);
+      return DbResult.success(index);
+    } on HiveError catch (e) {
+      return DbResult.failure(e.message);
+    }
+  }
 }

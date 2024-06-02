@@ -30,6 +30,9 @@ mixin _$HomeState {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -46,6 +49,9 @@ mixin _$HomeState {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,6 +68,9 @@ mixin _$HomeState {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -80,6 +89,9 @@ mixin _$HomeState {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -96,6 +108,9 @@ mixin _$HomeState {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -112,6 +127,9 @@ mixin _$HomeState {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -184,6 +202,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) {
     return initial();
   }
@@ -203,6 +224,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) {
     return initial?.call();
   }
@@ -222,6 +246,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -246,6 +273,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) {
     return initial(this);
   }
@@ -265,6 +295,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) {
     return initial?.call(this);
   }
@@ -284,6 +317,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -374,6 +410,9 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) {
     return selectTaskFilter(index);
   }
@@ -393,6 +432,9 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) {
     return selectTaskFilter?.call(index);
   }
@@ -412,6 +454,9 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (selectTaskFilter != null) {
@@ -436,6 +481,9 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) {
     return selectTaskFilter(this);
   }
@@ -455,6 +503,9 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) {
     return selectTaskFilter?.call(this);
   }
@@ -474,6 +525,9 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (selectTaskFilter != null) {
@@ -571,6 +625,9 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) {
     return changeCreateTaskState(isFormHidded);
   }
@@ -590,6 +647,9 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) {
     return changeCreateTaskState?.call(isFormHidded);
   }
@@ -609,6 +669,9 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (changeCreateTaskState != null) {
@@ -633,6 +696,9 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) {
     return changeCreateTaskState(this);
   }
@@ -652,6 +718,9 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) {
     return changeCreateTaskState?.call(this);
   }
@@ -671,6 +740,9 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (changeCreateTaskState != null) {
@@ -740,6 +812,9 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) {
     return createTaskLoading();
   }
@@ -759,6 +834,9 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) {
     return createTaskLoading?.call();
   }
@@ -778,6 +856,9 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (createTaskLoading != null) {
@@ -802,6 +883,9 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) {
     return createTaskLoading(this);
   }
@@ -821,6 +905,9 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) {
     return createTaskLoading?.call(this);
   }
@@ -840,6 +927,9 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (createTaskLoading != null) {
@@ -930,6 +1020,9 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) {
     return createTaskSuccess(task);
   }
@@ -949,6 +1042,9 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) {
     return createTaskSuccess?.call(task);
   }
@@ -968,6 +1064,9 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (createTaskSuccess != null) {
@@ -992,6 +1091,9 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) {
     return createTaskSuccess(this);
   }
@@ -1011,6 +1113,9 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) {
     return createTaskSuccess?.call(this);
   }
@@ -1030,6 +1135,9 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (createTaskSuccess != null) {
@@ -1126,6 +1234,9 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) {
     return createTaskFailure(message);
   }
@@ -1145,6 +1256,9 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) {
     return createTaskFailure?.call(message);
   }
@@ -1164,6 +1278,9 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (createTaskFailure != null) {
@@ -1188,6 +1305,9 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) {
     return createTaskFailure(this);
   }
@@ -1207,6 +1327,9 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) {
     return createTaskFailure?.call(this);
   }
@@ -1226,6 +1349,9 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (createTaskFailure != null) {
@@ -1295,6 +1421,9 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) {
     return getTasksLoading();
   }
@@ -1314,6 +1443,9 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) {
     return getTasksLoading?.call();
   }
@@ -1333,6 +1465,9 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (getTasksLoading != null) {
@@ -1357,6 +1492,9 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) {
     return getTasksLoading(this);
   }
@@ -1376,6 +1514,9 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) {
     return getTasksLoading?.call(this);
   }
@@ -1395,6 +1536,9 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (getTasksLoading != null) {
@@ -1493,6 +1637,9 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) {
     return getTasksSuccess(task);
   }
@@ -1512,6 +1659,9 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) {
     return getTasksSuccess?.call(task);
   }
@@ -1531,6 +1681,9 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (getTasksSuccess != null) {
@@ -1555,6 +1708,9 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) {
     return getTasksSuccess(this);
   }
@@ -1574,6 +1730,9 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) {
     return getTasksSuccess?.call(this);
   }
@@ -1593,6 +1752,9 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (getTasksSuccess != null) {
@@ -1689,6 +1851,9 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) {
     return getTasksFailure(message);
   }
@@ -1708,6 +1873,9 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) {
     return getTasksFailure?.call(message);
   }
@@ -1727,6 +1895,9 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (getTasksFailure != null) {
@@ -1751,6 +1922,9 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) {
     return getTasksFailure(this);
   }
@@ -1770,6 +1944,9 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) {
     return getTasksFailure?.call(this);
   }
@@ -1789,6 +1966,9 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (getTasksFailure != null) {
@@ -1857,6 +2037,9 @@ class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) {
     return updateTasksLoading();
   }
@@ -1876,6 +2059,9 @@ class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) {
     return updateTasksLoading?.call();
   }
@@ -1895,6 +2081,9 @@ class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (updateTasksLoading != null) {
@@ -1919,6 +2108,9 @@ class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) {
     return updateTasksLoading(this);
   }
@@ -1938,6 +2130,9 @@ class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) {
     return updateTasksLoading?.call(this);
   }
@@ -1957,6 +2152,9 @@ class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (updateTasksLoading != null) {
@@ -2047,6 +2245,9 @@ class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) {
     return updateTasksSuccess(task);
   }
@@ -2066,6 +2267,9 @@ class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) {
     return updateTasksSuccess?.call(task);
   }
@@ -2085,6 +2289,9 @@ class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (updateTasksSuccess != null) {
@@ -2109,6 +2316,9 @@ class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) {
     return updateTasksSuccess(this);
   }
@@ -2128,6 +2338,9 @@ class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) {
     return updateTasksSuccess?.call(this);
   }
@@ -2147,6 +2360,9 @@ class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (updateTasksSuccess != null) {
@@ -2243,6 +2459,9 @@ class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
     required TResult Function() updateTasksLoading,
     required TResult Function(TaskModel task) updateTasksSuccess,
     required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
   }) {
     return updateTasksFailure(message);
   }
@@ -2262,6 +2481,9 @@ class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
     TResult? Function()? updateTasksLoading,
     TResult? Function(TaskModel task)? updateTasksSuccess,
     TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
   }) {
     return updateTasksFailure?.call(message);
   }
@@ -2281,6 +2503,9 @@ class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
     TResult Function()? updateTasksLoading,
     TResult Function(TaskModel task)? updateTasksSuccess,
     TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (updateTasksFailure != null) {
@@ -2305,6 +2530,9 @@ class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
     required TResult Function(UpdateTasksLoading value) updateTasksLoading,
     required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
     required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
   }) {
     return updateTasksFailure(this);
   }
@@ -2324,6 +2552,9 @@ class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
     TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
   }) {
     return updateTasksFailure?.call(this);
   }
@@ -2343,6 +2574,9 @@ class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
     TResult Function(UpdateTasksLoading value)? updateTasksLoading,
     TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
     TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
     required TResult orElse(),
   }) {
     if (updateTasksFailure != null) {
@@ -2359,5 +2593,613 @@ abstract class UpdateTasksFailure implements HomeState {
   String? get message;
   @JsonKey(ignore: true)
   _$$UpdateTasksFailureImplCopyWith<_$UpdateTasksFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DeleteTasksLoadingImplCopyWith<$Res> {
+  factory _$$DeleteTasksLoadingImplCopyWith(_$DeleteTasksLoadingImpl value,
+          $Res Function(_$DeleteTasksLoadingImpl) then) =
+      __$$DeleteTasksLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DeleteTasksLoadingImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$DeleteTasksLoadingImpl>
+    implements _$$DeleteTasksLoadingImplCopyWith<$Res> {
+  __$$DeleteTasksLoadingImplCopyWithImpl(_$DeleteTasksLoadingImpl _value,
+      $Res Function(_$DeleteTasksLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DeleteTasksLoadingImpl implements DeleteTasksLoading {
+  const _$DeleteTasksLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.deleteTasksLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DeleteTasksLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() createTaskLoading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
+    required TResult Function() getTasksLoading,
+    required TResult Function(List<TaskModel>? task) getTasksSuccess,
+    required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
+  }) {
+    return deleteTasksLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? createTaskLoading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
+    TResult? Function()? getTasksLoading,
+    TResult? Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
+  }) {
+    return deleteTasksLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? createTaskLoading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
+    TResult Function()? getTasksLoading,
+    TResult Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (deleteTasksLoading != null) {
+      return deleteTasksLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) createTaskLoading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
+    required TResult Function(GetTasksLoading value) getTasksLoading,
+    required TResult Function(GetTasksSuccess value) getTasksSuccess,
+    required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
+  }) {
+    return deleteTasksLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? createTaskLoading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
+    TResult? Function(GetTasksLoading value)? getTasksLoading,
+    TResult? Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
+  }) {
+    return deleteTasksLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? createTaskLoading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
+    TResult Function(GetTasksLoading value)? getTasksLoading,
+    TResult Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (deleteTasksLoading != null) {
+      return deleteTasksLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DeleteTasksLoading implements HomeState {
+  const factory DeleteTasksLoading() = _$DeleteTasksLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$DeleteTasksSuccessImplCopyWith<$Res> {
+  factory _$$DeleteTasksSuccessImplCopyWith(_$DeleteTasksSuccessImpl value,
+          $Res Function(_$DeleteTasksSuccessImpl) then) =
+      __$$DeleteTasksSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index});
+}
+
+/// @nodoc
+class __$$DeleteTasksSuccessImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$DeleteTasksSuccessImpl>
+    implements _$$DeleteTasksSuccessImplCopyWith<$Res> {
+  __$$DeleteTasksSuccessImplCopyWithImpl(_$DeleteTasksSuccessImpl _value,
+      $Res Function(_$DeleteTasksSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$DeleteTasksSuccessImpl(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DeleteTasksSuccessImpl implements DeleteTasksSuccess {
+  const _$DeleteTasksSuccessImpl(this.index);
+
+  @override
+  final int index;
+
+  @override
+  String toString() {
+    return 'HomeState.deleteTasksSuccess(index: $index)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteTasksSuccessImpl &&
+            (identical(other.index, index) || other.index == index));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteTasksSuccessImplCopyWith<_$DeleteTasksSuccessImpl> get copyWith =>
+      __$$DeleteTasksSuccessImplCopyWithImpl<_$DeleteTasksSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() createTaskLoading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
+    required TResult Function() getTasksLoading,
+    required TResult Function(List<TaskModel>? task) getTasksSuccess,
+    required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
+  }) {
+    return deleteTasksSuccess(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? createTaskLoading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
+    TResult? Function()? getTasksLoading,
+    TResult? Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
+  }) {
+    return deleteTasksSuccess?.call(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? createTaskLoading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
+    TResult Function()? getTasksLoading,
+    TResult Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (deleteTasksSuccess != null) {
+      return deleteTasksSuccess(index);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) createTaskLoading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
+    required TResult Function(GetTasksLoading value) getTasksLoading,
+    required TResult Function(GetTasksSuccess value) getTasksSuccess,
+    required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
+  }) {
+    return deleteTasksSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? createTaskLoading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
+    TResult? Function(GetTasksLoading value)? getTasksLoading,
+    TResult? Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
+  }) {
+    return deleteTasksSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? createTaskLoading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
+    TResult Function(GetTasksLoading value)? getTasksLoading,
+    TResult Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (deleteTasksSuccess != null) {
+      return deleteTasksSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DeleteTasksSuccess implements HomeState {
+  const factory DeleteTasksSuccess(final int index) = _$DeleteTasksSuccessImpl;
+
+  int get index;
+  @JsonKey(ignore: true)
+  _$$DeleteTasksSuccessImplCopyWith<_$DeleteTasksSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DeleteTasksFailureImplCopyWith<$Res> {
+  factory _$$DeleteTasksFailureImplCopyWith(_$DeleteTasksFailureImpl value,
+          $Res Function(_$DeleteTasksFailureImpl) then) =
+      __$$DeleteTasksFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$DeleteTasksFailureImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$DeleteTasksFailureImpl>
+    implements _$$DeleteTasksFailureImplCopyWith<$Res> {
+  __$$DeleteTasksFailureImplCopyWithImpl(_$DeleteTasksFailureImpl _value,
+      $Res Function(_$DeleteTasksFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$DeleteTasksFailureImpl(
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DeleteTasksFailureImpl implements DeleteTasksFailure {
+  const _$DeleteTasksFailureImpl(this.message);
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'HomeState.deleteTasksFailure(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteTasksFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteTasksFailureImplCopyWith<_$DeleteTasksFailureImpl> get copyWith =>
+      __$$DeleteTasksFailureImplCopyWithImpl<_$DeleteTasksFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function() createTaskLoading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
+    required TResult Function() getTasksLoading,
+    required TResult Function(List<TaskModel>? task) getTasksSuccess,
+    required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
+  }) {
+    return deleteTasksFailure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function()? createTaskLoading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
+    TResult? Function()? getTasksLoading,
+    TResult? Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
+  }) {
+    return deleteTasksFailure?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function()? createTaskLoading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
+    TResult Function()? getTasksLoading,
+    TResult Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (deleteTasksFailure != null) {
+      return deleteTasksFailure(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(CreateTaskLoading value) createTaskLoading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
+    required TResult Function(GetTasksLoading value) getTasksLoading,
+    required TResult Function(GetTasksSuccess value) getTasksSuccess,
+    required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
+  }) {
+    return deleteTasksFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(CreateTaskLoading value)? createTaskLoading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
+    TResult? Function(GetTasksLoading value)? getTasksLoading,
+    TResult? Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
+  }) {
+    return deleteTasksFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(CreateTaskLoading value)? createTaskLoading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
+    TResult Function(GetTasksLoading value)? getTasksLoading,
+    TResult Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (deleteTasksFailure != null) {
+      return deleteTasksFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DeleteTasksFailure implements HomeState {
+  const factory DeleteTasksFailure(final String? message) =
+      _$DeleteTasksFailureImpl;
+
+  String? get message;
+  @JsonKey(ignore: true)
+  _$$DeleteTasksFailureImplCopyWith<_$DeleteTasksFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
