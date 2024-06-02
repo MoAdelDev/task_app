@@ -19,6 +19,7 @@ class ThemeManager {
           error: ColorLightManager.error,
           outline: ColorLightManager.grey.withOpacity(0.3),
           outlineVariant: ColorLightManager.grey,
+          shadow: ColorLightManager.shadowColor,
         ),
         appBarTheme: AppBarTheme(
           backgroundColor: ColorLightManager.background,

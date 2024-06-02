@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 class ColorLightManager {
   static const Color background = Color(0xFFFFFFFF);
@@ -14,4 +14,5 @@ class ColorLightManager {
   static const Color error = Color(0xFFF24E1E);
   static const Color onError = Color(0xFFFFFFFF);
   static const Color grey = Color(0xff717171);
+  static Color shadowColor = const Color(0xff000000).withOpacity(0.85);
 }
