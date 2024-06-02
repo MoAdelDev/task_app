@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'home_cubit.freezed.dart';
@@ -18,4 +19,17 @@ class HomeCubit extends Cubit<HomeState> {
     selectedFilterIndex = index;
     emit(HomeState.selectTaskFilter(index));
   }
+
+  bool isCreateTaskFormHidden = true;
+
+  void emitChangeCreateTaskState(bool isHide) {
+    isCreateTaskFormHidden = isHide;
+    emit(HomeState.changeCreateTaskState(isHide));
+  }
+
+  final formkey = GlobalKey<FormState>();
+  final taskTitleController = TextEditingController();
+  final dueDateController = TextEditingController();
+
+  void emitSaveTaskState() {}
 }

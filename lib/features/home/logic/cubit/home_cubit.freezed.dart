@@ -20,18 +20,21 @@ mixin _$HomeState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) showCreateTaskForm,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? showCreateTaskForm,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? showCreateTaskForm,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$HomeState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value) showCreateTaskForm,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? showCreateTaskForm,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? showCreateTaskForm,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -113,6 +119,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) showCreateTaskForm,
   }) {
     return initial();
   }
@@ -122,6 +129,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? showCreateTaskForm,
   }) {
     return initial?.call();
   }
@@ -131,6 +139,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? showCreateTaskForm,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -144,6 +153,7 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value) showCreateTaskForm,
   }) {
     return initial(this);
   }
@@ -153,6 +163,7 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? showCreateTaskForm,
   }) {
     return initial?.call(this);
   }
@@ -162,6 +173,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? showCreateTaskForm,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -242,6 +254,7 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) showCreateTaskForm,
   }) {
     return selectTaskFilter(index);
   }
@@ -251,6 +264,7 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? showCreateTaskForm,
   }) {
     return selectTaskFilter?.call(index);
   }
@@ -260,6 +274,7 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? showCreateTaskForm,
     required TResult orElse(),
   }) {
     if (selectTaskFilter != null) {
@@ -273,6 +288,7 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value) showCreateTaskForm,
   }) {
     return selectTaskFilter(this);
   }
@@ -282,6 +298,7 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? showCreateTaskForm,
   }) {
     return selectTaskFilter?.call(this);
   }
@@ -291,6 +308,7 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? showCreateTaskForm,
     required TResult orElse(),
   }) {
     if (selectTaskFilter != null) {
@@ -306,5 +324,147 @@ abstract class SelectTaskFilter implements HomeState {
   int get index;
   @JsonKey(ignore: true)
   _$$SelectTaskFilterImplCopyWith<_$SelectTaskFilterImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ShowCreateTaskFormImplCopyWith<$Res> {
+  factory _$$ShowCreateTaskFormImplCopyWith(_$ShowCreateTaskFormImpl value,
+          $Res Function(_$ShowCreateTaskFormImpl) then) =
+      __$$ShowCreateTaskFormImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool isFormHidded});
+}
+
+/// @nodoc
+class __$$ShowCreateTaskFormImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$ShowCreateTaskFormImpl>
+    implements _$$ShowCreateTaskFormImplCopyWith<$Res> {
+  __$$ShowCreateTaskFormImplCopyWithImpl(_$ShowCreateTaskFormImpl _value,
+      $Res Function(_$ShowCreateTaskFormImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? isFormHidded = null,
+  }) {
+    return _then(_$ShowCreateTaskFormImpl(
+      null == isFormHidded
+          ? _value.isFormHidded
+          : isFormHidded // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ShowCreateTaskFormImpl implements ChangeCreateTaskState {
+  const _$ShowCreateTaskFormImpl(this.isFormHidded);
+
+  @override
+  final bool isFormHidded;
+
+  @override
+  String toString() {
+    return 'HomeState.showCreateTaskForm(isFormHidded: $isFormHidded)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ShowCreateTaskFormImpl &&
+            (identical(other.isFormHidded, isFormHidded) ||
+                other.isFormHidded == isFormHidded));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, isFormHidded);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ShowCreateTaskFormImplCopyWith<_$ShowCreateTaskFormImpl> get copyWith =>
+      __$$ShowCreateTaskFormImplCopyWithImpl<_$ShowCreateTaskFormImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) showCreateTaskForm,
+  }) {
+    return showCreateTaskForm(isFormHidded);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? showCreateTaskForm,
+  }) {
+    return showCreateTaskForm?.call(isFormHidded);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? showCreateTaskForm,
+    required TResult orElse(),
+  }) {
+    if (showCreateTaskForm != null) {
+      return showCreateTaskForm(isFormHidded);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value) showCreateTaskForm,
+  }) {
+    return showCreateTaskForm(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? showCreateTaskForm,
+  }) {
+    return showCreateTaskForm?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? showCreateTaskForm,
+    required TResult orElse(),
+  }) {
+    if (showCreateTaskForm != null) {
+      return showCreateTaskForm(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeCreateTaskState implements HomeState {
+  const factory ChangeCreateTaskState(final bool isFormHidded) =
+      _$ShowCreateTaskFormImpl;
+
+  bool get isFormHidded;
+  @JsonKey(ignore: true)
+  _$$ShowCreateTaskFormImplCopyWith<_$ShowCreateTaskFormImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
