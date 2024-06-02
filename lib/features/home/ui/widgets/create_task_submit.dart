@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task_app/core/helpers/toasts.dart';
@@ -18,8 +16,13 @@ class CreateTaskSubmit extends StatelessWidget {
             showToast('Task added successfully');
           },
           createTaskFailure: (message) {
-            log(message ?? '');
-            showToast('Failed to add task. try again');
+            showToast('Failed to add task. try again', isError: true);
+          },
+          updateTasksSuccess: (task) {
+            showToast('Task updated successfully');
+          },
+          updateTasksFailure: (message) {
+            showToast('Failed to update task. try again', isError: true);
           },
         );
       },
@@ -29,11 +32,17 @@ class CreateTaskSubmit extends StatelessWidget {
           onPressed: () {
             if (cubit.isCreateTaskFormHidden) {
               cubit.emitChangeCreateTaskState(false);
+            } else if (cubit.isEdit) {
+              cubit.emitUpdateTaskState();
             } else {
               cubit.emitSaveTaskState();
             }
           },
-          label: cubit.isCreateTaskFormHidden ? 'Create Task' : 'Save Task',
+          label: cubit.isCreateTaskFormHidden
+              ? 'Create Task'
+              : cubit.isEdit
+                  ? 'Edit Task'
+                  : 'Save Task',
           isLoading: cubit.isLoading,
         );
       },

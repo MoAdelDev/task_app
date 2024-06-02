@@ -35,8 +35,22 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   bool isCreateTaskFormHidden = true;
-
-  void emitChangeCreateTaskState(bool isHide) {
+  bool isEdit = false;
+  int? taskIndexWhichUpdate;
+  void emitChangeCreateTaskState(
+    bool isHide, {
+    bool isEdit = false,
+    int? index,
+  }) {
+    if (isHide) {
+      _clearControllers();
+    }
+    if (index != null) {
+      this.isEdit = isEdit;
+      taskIndexWhichUpdate = index;
+      taskTitleController.text = allTasks[index].title;
+      dueDateController.text = allTasks[index].dueDate;
+    }
     isCreateTaskFormHidden = isHide;
     emit(HomeState.changeCreateTaskState(isHide));
   }
@@ -45,15 +59,22 @@ class HomeCubit extends Cubit<HomeState> {
   final taskTitleController = TextEditingController();
   final dueDateController = TextEditingController();
 
-  void emitSelectDueDateState(BuildContext context) async {
+  void emitSelectDueDateState(BuildContext context, {int? index}) async {
+    DateTime currentDate = DateTime.now();
+    if (index != null) {
+      if (currentDate.day > DateTime.parse(dueDateController.text).day) {
+        currentDate = DateTime.parse(dueDateController.text);
+      }
+    }
     DateTime? newDate = await showDatePicker(
       context: context,
-      initialDate: DateTime.now(),
+      initialDate: currentDate,
       firstDate: DateTime.now(),
       lastDate: DateTime(2030),
-      currentDate: DateTime.now(),
+      currentDate: index != null
+          ? DateTime.parse(dueDateController.text)
+          : DateTime.now(),
     );
-
     if (newDate == null) return;
     String formattedDate = DateFormat('EEE. dd-MM-yyyy').format(newDate);
     dueDateController.text = formattedDate;
@@ -89,6 +110,8 @@ class HomeCubit extends Cubit<HomeState> {
       emit(HomeState.createTaskFailure(message));
 
   void _clearControllers() {
+    isEdit = false;
+    taskIndexWhichUpdate = null;
     taskTitleController.text = '';
     dueDateController.text = '';
   }
@@ -125,6 +148,24 @@ class HomeCubit extends Cubit<HomeState> {
       success: (task) => _emitUpdateTaskStatusSuccessState(task, index),
       failure: _emitUpdateTaskFailureState,
     );
+  }
+
+  void emitUpdateTaskState() async {
+    emit(const HomeState.updateTasksLoading());
+    final result = await _tasksActionsRepo.updateTask(
+        TaskModel(
+          title: taskTitleController.text,
+          dueDate: dueDateController.text,
+          isDone: allTasks[taskIndexWhichUpdate!].isDone,
+        ),
+        taskIndexWhichUpdate!);
+
+    result.when(
+      success: (data) =>
+          _emitUpdateTaskStatusSuccessState(data, taskIndexWhichUpdate!),
+      failure: _emitUpdateTaskFailureState,
+    );
+    emitChangeCreateTaskState(true);
   }
 
   void _emitUpdateTaskStatusSuccessState(TaskModel? task, int index) {

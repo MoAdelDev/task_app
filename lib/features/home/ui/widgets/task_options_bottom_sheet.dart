@@ -51,7 +51,14 @@ class TaskOptionsBottomSheet extends StatelessWidget {
             ),
             verticalSpace(20),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                context.pop();
+                cubit.emitChangeCreateTaskState(
+                  false,
+                  isEdit: true,
+                  index: index,
+                );
+              },
               label: 'Edit Task',
               height: 40.h,
             ),

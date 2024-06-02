@@ -17,4 +17,17 @@ class TasksActionsRepo {
       return DbResult.failure(e.message);
     }
   }
+
+  Future<DbResult<TaskModel>> updateTask(
+    TaskModel taskModel,
+    int index,
+  ) async {
+    try {
+      final tasksBox = Hive.box<TaskModel>(kTasksBox);
+      await tasksBox.putAt(index, taskModel);
+      return DbResult.success(taskModel);
+    } on HiveError catch (e) {
+      return DbResult.failure(e.message);
+    }
+  }
 }
