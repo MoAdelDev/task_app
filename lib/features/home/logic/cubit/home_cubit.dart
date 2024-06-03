@@ -1,7 +1,10 @@
+import 'dart:math';
+
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:intl/intl.dart';
+import 'package:task_app/core/sync/services/sync_service.dart';
 import 'package:task_app/features/home/data/models/filter_model.dart';
 import 'package:task_app/features/home/data/models/task_model.dart';
 import 'package:task_app/features/home/data/repos/create_task_repo.dart';
@@ -15,10 +18,12 @@ class HomeCubit extends Cubit<HomeState> {
   final CreateTaskRepo _createTaskRepo;
   final GetTasksRepo _getTasksRepo;
   final TasksActionsRepo _tasksActionsRepo;
+  final SyncService _syncService;
   HomeCubit(
     this._createTaskRepo,
     this._getTasksRepo,
     this._tasksActionsRepo,
+    this._syncService,
   ) : super(const HomeState.initial());
 
   List<FilterModel> filters = [
@@ -103,6 +108,7 @@ class HomeCubit extends Cubit<HomeState> {
     if (taskModel != null) originalTasks.add(taskModel);
     emit(HomeState.createTaskSuccess(taskModel));
     _clearControllers();
+    _syncService.syncTasks();
     emitChangeCreateTaskState(true);
   }
 
@@ -131,6 +137,7 @@ class HomeCubit extends Cubit<HomeState> {
   void _emitGetTasksSuccessState(List<TaskModel>? tasks) {
     originalTasks = tasks ?? [];
     allTasks = originalTasks;
+    _syncService.syncTasks();
     emit(HomeState.getTasksSuccess(tasks));
   }
 
@@ -172,6 +179,7 @@ class HomeCubit extends Cubit<HomeState> {
   void _emitUpdateTaskStatusSuccessState(TaskModel? task, int index) {
     if (task == null) return;
     allTasks[index] = task;
+    _syncService.syncTasks();
     emit(HomeState.updateTasksSuccess(task));
   }
 
@@ -181,16 +189,18 @@ class HomeCubit extends Cubit<HomeState> {
 
   void emitDeleteTaskState(int index) async {
     emit(const HomeState.deleteTasksLoading());
-    final result = await _tasksActionsRepo.deleteTask(index);
+    final result = await _tasksActionsRepo.deleteTask(allTasks[index]);
     result.when(
       success: _emitDeleteTaskSucess,
       failure: _emitDeletetaskFailure,
     );
   }
 
-  void _emitDeleteTaskSucess(int? index) {
-    allTasks.removeAt(index!);
-    emit(HomeState.deleteTasksSuccess(index));
+  void _emitDeleteTaskSucess(TaskModel? task) async {
+    originalTasks.remove(task);
+    allTasks.remove(task);
+    _syncService.syncTasks();
+    emit(HomeState.deleteTasksSuccess(task?.key ?? Random().nextInt(1000)));
   }
 
   void _emitDeletetaskFailure(String? message) {

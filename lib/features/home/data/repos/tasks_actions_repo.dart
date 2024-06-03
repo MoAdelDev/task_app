@@ -11,6 +11,8 @@ class TasksActionsRepo {
     try {
       final tasksBox = Hive.box<TaskModel>(kTasksBox);
       taskModel.isDone = !taskModel.isDone;
+      taskModel.lastUpdated = DateTime.now();
+      taskModel.isSynced = false;
       await tasksBox.putAt(index, taskModel);
       return DbResult.success(taskModel);
     } on HiveError catch (e) {
@@ -24,6 +26,8 @@ class TasksActionsRepo {
   ) async {
     try {
       final tasksBox = Hive.box<TaskModel>(kTasksBox);
+      taskModel.lastUpdated = DateTime.now();
+      taskModel.isSynced = false;
       await tasksBox.putAt(index, taskModel);
       return DbResult.success(taskModel);
     } on HiveError catch (e) {
@@ -31,13 +35,14 @@ class TasksActionsRepo {
     }
   }
 
-  Future<DbResult<int>> deleteTask(
-    int index,
+  Future<DbResult<TaskModel>> deleteTask(
+    TaskModel task,
   ) async {
     try {
-      final tasksBox = Hive.box<TaskModel>(kTasksBox);
-      await tasksBox.deleteAt(index);
-      return DbResult.success(index);
+      task.isDeleted = true;
+      task.isSynced = false;
+      await task.save();
+      return DbResult.success(task);
     } on HiveError catch (e) {
       return DbResult.failure(e.message);
     }

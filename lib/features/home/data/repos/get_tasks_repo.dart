@@ -8,7 +8,7 @@ class GetTasksRepo {
     try {
       final tasksBox = Hive.box<TaskModel>(kTasksBox);
       final List<TaskModel> tasks =
-          tasksBox.toMap().entries.map((e) => e.value).toList();
+          tasksBox.values.where((element) => !element.isDeleted).toList();
       return DbResult.success(tasks);
     } on HiveError catch (e) {
       return DbResult.failure(e.message);

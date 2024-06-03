@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "857695741634",
+    "project_id": "simple-task-app-788c5",
+    "storage_bucket": "simple-task-app-788c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857695741634:android:ce0760d589f1584b70bd5b",
+        "android_client_info": {
+          "package_name": "com.example.task_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeoDxdMLCVZGfwbMiDK3yi7G0K0x3BvQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

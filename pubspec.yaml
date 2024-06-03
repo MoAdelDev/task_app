@@ -79,7 +79,10 @@ dependencies:
   dropdown_button2: ^2.3.9
   # Color Picker
   flutter_colorpicker: ^1.1.0
+  # for 2 objects equality
   equatable: ^2.0.5
+  # for interner connectivity
+  connectivity_plus: ^6.0.3
 
 dev_dependencies:
   flutter_test:
