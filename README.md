@@ -27,7 +27,7 @@ This Flutter application is a powerful task management tool that allows users to
 
 ![Frame 10](https://github.com/MoAdelDev/task_app/assets/57016916/a35d3978-8e92-4c98-b069-7f7d0131f8d9)
 
-## Getting Started & Installation 🚀
+## Getting Started 🚀
 
 1. Prerequisites
 
@@ -48,6 +48,29 @@ This Flutter application is a powerful task management tool that allows users to
 
   - Connect your Android device or run an emulator.
   - Run flutter run in your terminal.
+
+## Usage
+
+This section guides you through setting up and using the task app.
+
+**Prerequisites:**
+
+- Flutter SDK installed (https://docs.flutter.dev/get-started/install)
+
+**Installation:**
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/MoAdelDev/task_app.git
+
+2. Navigate to the project directory:
+   Bash
+  cd task_app
+
+3. Run The app
+   Bash
+   flutter run
 
 ## Additional Notes
 
