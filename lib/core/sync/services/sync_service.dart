@@ -13,7 +13,6 @@ class SyncService {
   Future<void> syncTasks() async {
     if (await _connectivityService.hasConnection()) {
       List<TaskModel> tasks = _taskBox.values.toList();
-
       for (var task in tasks) {
         if (task.isDeleted) {
           await _taskRepository.deleteTask(task);

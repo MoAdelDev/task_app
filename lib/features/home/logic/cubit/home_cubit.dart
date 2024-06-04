@@ -1,6 +1,8 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:bloc/bloc.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:intl/intl.dart';
@@ -26,6 +28,16 @@ class HomeCubit extends Cubit<HomeState> {
     this._tasksActionsRepo,
     this._syncService,
   ) : super(const HomeState.initial());
+
+  StreamSubscription<List<ConnectivityResult>>? _subscription;
+  void listenForNetworkConnectionStatus() {
+    _subscription =
+        Connectivity().onConnectivityChanged.listen(_handleNetworkStatus);
+  }
+
+  void _handleNetworkStatus(List<ConnectivityResult> result) {
+    _syncService.syncTasks();
+  }
 
   List<FilterModel> filters = [
     NotFilter(),
@@ -140,7 +152,6 @@ class HomeCubit extends Cubit<HomeState> {
   void _emitGetTasksSuccessState(List<TaskModel>? tasks) {
     originalTasks = tasks ?? [];
     allTasks = originalTasks;
-    _syncService.syncTasks();
     emit(HomeState.getTasksSuccess(tasks));
   }
 
@@ -207,5 +218,11 @@ class HomeCubit extends Cubit<HomeState> {
 
   void _emitDeletetaskFailure(String? message) {
     emit(HomeState.deleteTasksFailure(message));
+  }
+
+  @override
+  Future<void> close() {
+    _subscription?.cancel();
+    return super.close();
   }
 }
