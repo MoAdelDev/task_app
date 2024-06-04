@@ -47,9 +47,10 @@ This Flutter application is a powerful task management tool that allows users to
 
 **4. Logic and Functionality:**
 
-* When a user adds a new task, a new `Task` object is created and added to the data model.
+* When a user adds a new task, a new `TaskModel` object is created and added to the data model.
 * The UI is updated to reflect the new task.
-* Marking a task complete updates the `is_completed` property of the corresponding `Task` object and updates the UI.
+* User can delete task and ui is updated .
+* Marking a task complete updates the `isDone` property of the corresponding `TaskModel` object and updates the UI.
 * When user is online the local data has been synced with firestore .
 
 ## Design System
