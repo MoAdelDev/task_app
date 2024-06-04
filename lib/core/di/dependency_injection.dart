@@ -4,6 +4,7 @@ import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:task_app/core/db/database_constants.dart';
 import 'package:task_app/core/router/route_manager.dart';
+import 'package:task_app/core/services/google_calendar_service.dart';
 import 'package:task_app/core/sync/services/connection_service.dart';
 import 'package:task_app/core/sync/services/firestore_task_repo.dart';
 import 'package:task_app/core/sync/services/sync_service.dart';
@@ -18,6 +19,9 @@ final getIt = GetIt.instance;
 void setupGetIt() {
   // Router
   getIt.registerLazySingleton(() => RouteManager());
+
+  // Google Calendar
+  getIt.registerLazySingleton(() => GoogleCalendarService());
 
   // Sync Service
   getIt.registerLazySingleton(() => Hive.box<TaskModel>(kTasksBox));
@@ -36,6 +40,7 @@ void setupGetIt() {
   getIt.registerLazySingleton(() => GetTasksRepo());
   getIt.registerLazySingleton(() => TasksActionsRepo());
   getIt.registerFactory(() => HomeCubit(
+        getIt(),
         getIt(),
         getIt(),
         getIt(),

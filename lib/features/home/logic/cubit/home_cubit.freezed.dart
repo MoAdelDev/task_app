@@ -21,6 +21,7 @@ mixin _$HomeState {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -40,6 +41,7 @@ mixin _$HomeState {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -59,6 +61,7 @@ mixin _$HomeState {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -80,6 +83,8 @@ mixin _$HomeState {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -99,6 +104,8 @@ mixin _$HomeState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -118,6 +125,8 @@ mixin _$HomeState {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -193,6 +202,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -215,6 +225,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -237,6 +248,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -264,6 +276,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -286,6 +300,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -308,6 +324,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -401,6 +419,7 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -423,6 +442,7 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -445,6 +465,7 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -472,6 +493,8 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -494,6 +517,8 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -516,6 +541,8 @@ class _$SelectTaskFilterImpl implements SelectTaskFilter {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -616,6 +643,7 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -638,6 +666,7 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -660,6 +689,7 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -687,6 +717,8 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -709,6 +741,8 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -731,6 +765,8 @@ class _$ChangeCreateTaskStateImpl implements ChangeCreateTaskState {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -759,6 +795,232 @@ abstract class ChangeCreateTaskState implements HomeState {
   bool get isFormHidded;
   @JsonKey(ignore: true)
   _$$ChangeCreateTaskStateImplCopyWith<_$ChangeCreateTaskStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ChangeGoogleCalendarCheckImplCopyWith<$Res> {
+  factory _$$ChangeGoogleCalendarCheckImplCopyWith(
+          _$ChangeGoogleCalendarCheckImpl value,
+          $Res Function(_$ChangeGoogleCalendarCheckImpl) then) =
+      __$$ChangeGoogleCalendarCheckImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool isChecked});
+}
+
+/// @nodoc
+class __$$ChangeGoogleCalendarCheckImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$ChangeGoogleCalendarCheckImpl>
+    implements _$$ChangeGoogleCalendarCheckImplCopyWith<$Res> {
+  __$$ChangeGoogleCalendarCheckImplCopyWithImpl(
+      _$ChangeGoogleCalendarCheckImpl _value,
+      $Res Function(_$ChangeGoogleCalendarCheckImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? isChecked = null,
+  }) {
+    return _then(_$ChangeGoogleCalendarCheckImpl(
+      null == isChecked
+          ? _value.isChecked
+          : isChecked // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChangeGoogleCalendarCheckImpl implements ChangeGoogleCalendarCheck {
+  const _$ChangeGoogleCalendarCheckImpl(this.isChecked);
+
+  @override
+  final bool isChecked;
+
+  @override
+  String toString() {
+    return 'HomeState.changeGoogleCalendarCheck(isChecked: $isChecked)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeGoogleCalendarCheckImpl &&
+            (identical(other.isChecked, isChecked) ||
+                other.isChecked == isChecked));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, isChecked);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeGoogleCalendarCheckImplCopyWith<_$ChangeGoogleCalendarCheckImpl>
+      get copyWith => __$$ChangeGoogleCalendarCheckImplCopyWithImpl<
+          _$ChangeGoogleCalendarCheckImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) selectTaskFilter,
+    required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
+    required TResult Function() createTaskLoading,
+    required TResult Function(TaskModel? task) createTaskSuccess,
+    required TResult Function(String? message) createTaskFailure,
+    required TResult Function() getTasksLoading,
+    required TResult Function(List<TaskModel>? task) getTasksSuccess,
+    required TResult Function(String? message) getTasksFailure,
+    required TResult Function() updateTasksLoading,
+    required TResult Function(TaskModel task) updateTasksSuccess,
+    required TResult Function(String? message) updateTasksFailure,
+    required TResult Function() deleteTasksLoading,
+    required TResult Function(int index) deleteTasksSuccess,
+    required TResult Function(String? message) deleteTasksFailure,
+  }) {
+    return changeGoogleCalendarCheck(isChecked);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? selectTaskFilter,
+    TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
+    TResult? Function()? createTaskLoading,
+    TResult? Function(TaskModel? task)? createTaskSuccess,
+    TResult? Function(String? message)? createTaskFailure,
+    TResult? Function()? getTasksLoading,
+    TResult? Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult? Function(String? message)? getTasksFailure,
+    TResult? Function()? updateTasksLoading,
+    TResult? Function(TaskModel task)? updateTasksSuccess,
+    TResult? Function(String? message)? updateTasksFailure,
+    TResult? Function()? deleteTasksLoading,
+    TResult? Function(int index)? deleteTasksSuccess,
+    TResult? Function(String? message)? deleteTasksFailure,
+  }) {
+    return changeGoogleCalendarCheck?.call(isChecked);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? selectTaskFilter,
+    TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
+    TResult Function()? createTaskLoading,
+    TResult Function(TaskModel? task)? createTaskSuccess,
+    TResult Function(String? message)? createTaskFailure,
+    TResult Function()? getTasksLoading,
+    TResult Function(List<TaskModel>? task)? getTasksSuccess,
+    TResult Function(String? message)? getTasksFailure,
+    TResult Function()? updateTasksLoading,
+    TResult Function(TaskModel task)? updateTasksSuccess,
+    TResult Function(String? message)? updateTasksFailure,
+    TResult Function()? deleteTasksLoading,
+    TResult Function(int index)? deleteTasksSuccess,
+    TResult Function(String? message)? deleteTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (changeGoogleCalendarCheck != null) {
+      return changeGoogleCalendarCheck(isChecked);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(SelectTaskFilter value) selectTaskFilter,
+    required TResult Function(ChangeCreateTaskState value)
+        changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
+    required TResult Function(CreateTaskLoading value) createTaskLoading,
+    required TResult Function(CreateTaskSuccess value) createTaskSuccess,
+    required TResult Function(CreateTaskFailure value) createTaskFailure,
+    required TResult Function(GetTasksLoading value) getTasksLoading,
+    required TResult Function(GetTasksSuccess value) getTasksSuccess,
+    required TResult Function(GetTasksFailure value) getTasksFailure,
+    required TResult Function(UpdateTasksLoading value) updateTasksLoading,
+    required TResult Function(UpdateTasksSuccess value) updateTasksSuccess,
+    required TResult Function(UpdateTasksFailure value) updateTasksFailure,
+    required TResult Function(DeleteTasksLoading value) deleteTasksLoading,
+    required TResult Function(DeleteTasksSuccess value) deleteTasksSuccess,
+    required TResult Function(DeleteTasksFailure value) deleteTasksFailure,
+  }) {
+    return changeGoogleCalendarCheck(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
+    TResult? Function(CreateTaskLoading value)? createTaskLoading,
+    TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult? Function(CreateTaskFailure value)? createTaskFailure,
+    TResult? Function(GetTasksLoading value)? getTasksLoading,
+    TResult? Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult? Function(GetTasksFailure value)? getTasksFailure,
+    TResult? Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult? Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult? Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult? Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult? Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult? Function(DeleteTasksFailure value)? deleteTasksFailure,
+  }) {
+    return changeGoogleCalendarCheck?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(SelectTaskFilter value)? selectTaskFilter,
+    TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
+    TResult Function(CreateTaskLoading value)? createTaskLoading,
+    TResult Function(CreateTaskSuccess value)? createTaskSuccess,
+    TResult Function(CreateTaskFailure value)? createTaskFailure,
+    TResult Function(GetTasksLoading value)? getTasksLoading,
+    TResult Function(GetTasksSuccess value)? getTasksSuccess,
+    TResult Function(GetTasksFailure value)? getTasksFailure,
+    TResult Function(UpdateTasksLoading value)? updateTasksLoading,
+    TResult Function(UpdateTasksSuccess value)? updateTasksSuccess,
+    TResult Function(UpdateTasksFailure value)? updateTasksFailure,
+    TResult Function(DeleteTasksLoading value)? deleteTasksLoading,
+    TResult Function(DeleteTasksSuccess value)? deleteTasksSuccess,
+    TResult Function(DeleteTasksFailure value)? deleteTasksFailure,
+    required TResult orElse(),
+  }) {
+    if (changeGoogleCalendarCheck != null) {
+      return changeGoogleCalendarCheck(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeGoogleCalendarCheck implements HomeState {
+  const factory ChangeGoogleCalendarCheck(final bool isChecked) =
+      _$ChangeGoogleCalendarCheckImpl;
+
+  bool get isChecked;
+  @JsonKey(ignore: true)
+  _$$ChangeGoogleCalendarCheckImplCopyWith<_$ChangeGoogleCalendarCheckImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -803,6 +1065,7 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -825,6 +1088,7 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -847,6 +1111,7 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -874,6 +1139,8 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -896,6 +1163,8 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -918,6 +1187,8 @@ class _$CreateTaskLoadingImpl implements CreateTaskLoading {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -1011,6 +1282,7 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -1033,6 +1305,7 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -1055,6 +1328,7 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -1082,6 +1356,8 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -1104,6 +1380,8 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -1126,6 +1404,8 @@ class _$CreateTaskSuccessImpl implements CreateTaskSuccess {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -1225,6 +1505,7 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -1247,6 +1528,7 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -1269,6 +1551,7 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -1296,6 +1579,8 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -1318,6 +1603,8 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -1340,6 +1627,8 @@ class _$CreateTaskFailureImpl implements CreateTaskFailure {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -1412,6 +1701,7 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -1434,6 +1724,7 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -1456,6 +1747,7 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -1483,6 +1775,8 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -1505,6 +1799,8 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -1527,6 +1823,8 @@ class _$GetTasksLoadingImpl implements GetTasksLoading {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -1628,6 +1926,7 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -1650,6 +1949,7 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -1672,6 +1972,7 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -1699,6 +2000,8 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -1721,6 +2024,8 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -1743,6 +2048,8 @@ class _$GetTasksSuccessImpl implements GetTasksSuccess {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -1842,6 +2149,7 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -1864,6 +2172,7 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -1886,6 +2195,7 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -1913,6 +2223,8 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -1935,6 +2247,8 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -1957,6 +2271,8 @@ class _$GetTasksFailureImpl implements GetTasksFailure {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -2028,6 +2344,7 @@ class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -2050,6 +2367,7 @@ class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -2072,6 +2390,7 @@ class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -2099,6 +2418,8 @@ class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -2121,6 +2442,8 @@ class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -2143,6 +2466,8 @@ class _$UpdateTasksLoadingImpl implements UpdateTasksLoading {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -2236,6 +2561,7 @@ class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -2258,6 +2584,7 @@ class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -2280,6 +2607,7 @@ class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -2307,6 +2635,8 @@ class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -2329,6 +2659,8 @@ class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -2351,6 +2683,8 @@ class _$UpdateTasksSuccessImpl implements UpdateTasksSuccess {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -2450,6 +2784,7 @@ class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -2472,6 +2807,7 @@ class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -2494,6 +2830,7 @@ class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -2521,6 +2858,8 @@ class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -2543,6 +2882,8 @@ class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -2565,6 +2906,8 @@ class _$UpdateTasksFailureImpl implements UpdateTasksFailure {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -2637,6 +2980,7 @@ class _$DeleteTasksLoadingImpl implements DeleteTasksLoading {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -2659,6 +3003,7 @@ class _$DeleteTasksLoadingImpl implements DeleteTasksLoading {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -2681,6 +3026,7 @@ class _$DeleteTasksLoadingImpl implements DeleteTasksLoading {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -2708,6 +3054,8 @@ class _$DeleteTasksLoadingImpl implements DeleteTasksLoading {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -2730,6 +3078,8 @@ class _$DeleteTasksLoadingImpl implements DeleteTasksLoading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -2752,6 +3102,8 @@ class _$DeleteTasksLoadingImpl implements DeleteTasksLoading {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -2845,6 +3197,7 @@ class _$DeleteTasksSuccessImpl implements DeleteTasksSuccess {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -2867,6 +3220,7 @@ class _$DeleteTasksSuccessImpl implements DeleteTasksSuccess {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -2889,6 +3243,7 @@ class _$DeleteTasksSuccessImpl implements DeleteTasksSuccess {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -2916,6 +3271,8 @@ class _$DeleteTasksSuccessImpl implements DeleteTasksSuccess {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -2938,6 +3295,8 @@ class _$DeleteTasksSuccessImpl implements DeleteTasksSuccess {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -2960,6 +3319,8 @@ class _$DeleteTasksSuccessImpl implements DeleteTasksSuccess {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
@@ -3058,6 +3419,7 @@ class _$DeleteTasksFailureImpl implements DeleteTasksFailure {
     required TResult Function() initial,
     required TResult Function(int index) selectTaskFilter,
     required TResult Function(bool isFormHidded) changeCreateTaskState,
+    required TResult Function(bool isChecked) changeGoogleCalendarCheck,
     required TResult Function() createTaskLoading,
     required TResult Function(TaskModel? task) createTaskSuccess,
     required TResult Function(String? message) createTaskFailure,
@@ -3080,6 +3442,7 @@ class _$DeleteTasksFailureImpl implements DeleteTasksFailure {
     TResult? Function()? initial,
     TResult? Function(int index)? selectTaskFilter,
     TResult? Function(bool isFormHidded)? changeCreateTaskState,
+    TResult? Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult? Function()? createTaskLoading,
     TResult? Function(TaskModel? task)? createTaskSuccess,
     TResult? Function(String? message)? createTaskFailure,
@@ -3102,6 +3465,7 @@ class _$DeleteTasksFailureImpl implements DeleteTasksFailure {
     TResult Function()? initial,
     TResult Function(int index)? selectTaskFilter,
     TResult Function(bool isFormHidded)? changeCreateTaskState,
+    TResult Function(bool isChecked)? changeGoogleCalendarCheck,
     TResult Function()? createTaskLoading,
     TResult Function(TaskModel? task)? createTaskSuccess,
     TResult Function(String? message)? createTaskFailure,
@@ -3129,6 +3493,8 @@ class _$DeleteTasksFailureImpl implements DeleteTasksFailure {
     required TResult Function(SelectTaskFilter value) selectTaskFilter,
     required TResult Function(ChangeCreateTaskState value)
         changeCreateTaskState,
+    required TResult Function(ChangeGoogleCalendarCheck value)
+        changeGoogleCalendarCheck,
     required TResult Function(CreateTaskLoading value) createTaskLoading,
     required TResult Function(CreateTaskSuccess value) createTaskSuccess,
     required TResult Function(CreateTaskFailure value) createTaskFailure,
@@ -3151,6 +3517,8 @@ class _$DeleteTasksFailureImpl implements DeleteTasksFailure {
     TResult? Function(_Initial value)? initial,
     TResult? Function(SelectTaskFilter value)? selectTaskFilter,
     TResult? Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult? Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult? Function(CreateTaskLoading value)? createTaskLoading,
     TResult? Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult? Function(CreateTaskFailure value)? createTaskFailure,
@@ -3173,6 +3541,8 @@ class _$DeleteTasksFailureImpl implements DeleteTasksFailure {
     TResult Function(_Initial value)? initial,
     TResult Function(SelectTaskFilter value)? selectTaskFilter,
     TResult Function(ChangeCreateTaskState value)? changeCreateTaskState,
+    TResult Function(ChangeGoogleCalendarCheck value)?
+        changeGoogleCalendarCheck,
     TResult Function(CreateTaskLoading value)? createTaskLoading,
     TResult Function(CreateTaskSuccess value)? createTaskSuccess,
     TResult Function(CreateTaskFailure value)? createTaskFailure,
