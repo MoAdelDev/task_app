@@ -15,6 +15,43 @@ This Flutter application is a powerful task management tool that allows users to
 ### Cross-Platform Compatibility:
   - Runs flawlessly on Android, Desktop, and macOS devices.
 
+## Code Documentation
+
+**1. Overall Architecture:**
+
+* The application consists of two layers :
+    * Core : Includes styles, extensions, shared widgets, services and others .
+    * Features : Each feature consists of three layers :
+        * Data : Includes Models and Repositories (Db and Api Calling)
+        * Logic : Includes Cubit/BloC StateManagement with its states to handle app states, Call repositiories and services .
+        * Ui : Includes Screens and its widgets .
+      
+**2. Data Model:**
+
+* Each task is represented as a `TaskModel` object with properties like:
+    * `title` (string)
+    * `dueDate` (date object, optional)
+    * `isDone` (boolean, optional)
+    * `isSynced` (boolean, optional)
+    * `syncedAt` (date object, optional)
+    * `isDeleted` (boolean, optional)
+    * `lastUpdated` (date object, optional)
+
+**3. User Interface:**
+
+* The UI uses a list view to display tasks.
+* Users can add new tasks using a text input field.
+* Tasks can be marked complete by tapping on a checkbox.
+* Users can edit existing tasks by tapping on them.
+* Users can filter tasks by done and not done.
+
+**4. Logic and Functionality:**
+
+* When a user adds a new task, a new `Task` object is created and added to the data model.
+* The UI is updated to reflect the new task.
+* Marking a task complete updates the `is_completed` property of the corresponding `Task` object and updates the UI.
+* When user is online the local data has been synced with firestore .
+
 ## Design System
 
 ![305585789-92fd36e2-e8e6-44d4-bcf5-0643e20df0a7](https://github.com/MoAdelDev/task_app/assets/57016916/c8ec7ebd-8a93-4ee0-a56b-14eb9b3771c9)
