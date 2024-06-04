@@ -19,14 +19,13 @@ This Flutter application is a powerful task management tool that allows users to
 
 ![305585789-92fd36e2-e8e6-44d4-bcf5-0643e20df0a7](https://github.com/MoAdelDev/task_app/assets/57016916/c8ec7ebd-8a93-4ee0-a56b-14eb9b3771c9)
 
-## !ScreenShots
+## ScreenShots
 
 ![Frame 9](https://github.com/MoAdelDev/task_app/assets/57016916/9bae50f3-5db9-4283-9db1-e0d0181c02e7)
 
 ![Frame 7](https://github.com/MoAdelDev/task_app/assets/57016916/0ed6acc0-980c-4e23-8ec2-444cff6e61cd)
 
 ![Frame 10](https://github.com/MoAdelDev/task_app/assets/57016916/a35d3978-8e92-4c98-b069-7f7d0131f8d9)
-
 
 ## Getting Started & Installation 🚀
 
