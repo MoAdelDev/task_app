@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomTap extends StatelessWidget {
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
   final Widget child;
   const CustomTap({
     super.key,

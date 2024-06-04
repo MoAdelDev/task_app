@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_app/core/style/color_manager.dart';
 import 'package:task_app/core/style/font_weight_helper.dart';
 
@@ -21,102 +20,102 @@ class ThemeManager {
           outlineVariant: ColorLightManager.grey,
           shadow: ColorLightManager.shadowColor,
         ),
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           backgroundColor: ColorLightManager.background,
           foregroundColor: ColorLightManager.onBackground,
           surfaceTintColor: ColorLightManager.background,
           centerTitle: false,
           elevation: 0,
-          iconTheme: const IconThemeData(
+          iconTheme: IconThemeData(
             color: ColorLightManager.onBackground,
           ),
-          actionsIconTheme: const IconThemeData(
+          actionsIconTheme: IconThemeData(
             color: ColorLightManager.onBackground,
             size: 35,
           ),
           titleTextStyle: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 20.sp,
+            fontSize: 20,
           ),
         ),
         scaffoldBackgroundColor: ColorLightManager.background,
         fontFamily: 'Inter',
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           titleLarge: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 30.sp,
+            fontSize: 30,
           ),
           titleMedium: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 26.sp,
+            fontSize: 26,
           ),
           titleSmall: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 20.sp,
+            fontSize: 20,
           ),
           bodyLarge: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.regular,
-            fontSize: 15.sp,
+            fontSize: 15,
           ),
           bodyMedium: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.regular,
-            fontSize: 13.sp,
+            fontSize: 13,
           ),
           bodySmall: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.regular,
-            fontSize: 12.sp,
+            fontSize: 12,
           ),
           labelLarge: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.regular,
-            fontSize: 16.sp,
+            fontSize: 16,
           ),
           labelMedium: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.regular,
-            fontSize: 14.sp,
+            fontSize: 14,
           ),
           labelSmall: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.regular,
-            fontSize: 12.sp,
+            fontSize: 12,
           ),
           displayLarge: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 40.sp,
+            fontSize: 40,
           ),
           displayMedium: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 32.sp,
+            fontSize: 32,
           ),
           displaySmall: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 24.sp,
+            fontSize: 24,
           ),
           headlineLarge: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 32.sp,
+            fontSize: 32,
           ),
           headlineMedium: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 24.sp,
+            fontSize: 24,
           ),
           headlineSmall: TextStyle(
             color: ColorLightManager.onBackground,
             fontWeight: FontWeightHelper.bold,
-            fontSize: 20.sp,
+            fontSize: 20,
           ),
         ),
       );

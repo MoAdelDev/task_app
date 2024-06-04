@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task_app/core/helpers/extensions.dart';
+import 'package:task_app/core/helpers/platforms.dart';
 import 'package:task_app/core/helpers/spacing.dart';
 import 'package:task_app/core/style/font_weight_helper.dart';
 import 'package:task_app/core/widgets/custom_tap.dart';
@@ -31,7 +32,11 @@ class CreateTaskForm extends StatelessWidget {
                 ),
                 CustomTap(
                   onTap: () {
-                    cubit.emitChangeCreateTaskState(true);
+                    if (isDesktop) {
+                      context.pop();
+                    } else {
+                      cubit.emitChangeCreateTaskState(true);
+                    }
                   },
                   child: Icon(
                     Icons.close,

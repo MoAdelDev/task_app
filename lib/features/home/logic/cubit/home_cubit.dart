@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:intl/intl.dart';
+import 'package:task_app/core/helpers/platforms.dart';
 import 'package:task_app/core/sync/services/sync_service.dart';
 import 'package:task_app/features/home/data/models/filter_model.dart';
 import 'package:task_app/features/home/data/models/task_model.dart';
@@ -56,7 +57,9 @@ class HomeCubit extends Cubit<HomeState> {
       taskTitleController.text = allTasks[index].title;
       dueDateController.text = allTasks[index].dueDate;
     }
-    isCreateTaskFormHidden = isHide;
+    if (isMobile) {
+      isCreateTaskFormHidden = isHide;
+    }
     emit(HomeState.changeCreateTaskState(isHide));
   }
 
@@ -167,7 +170,6 @@ class HomeCubit extends Cubit<HomeState> {
       ),
       taskIndexWhichUpdate!,
     );
-
     result.when(
       success: (data) =>
           _emitUpdateTaskStatusSuccessState(data, taskIndexWhichUpdate!),

@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_app/core/helpers/extensions.dart';
+import 'package:task_app/core/helpers/platforms.dart';
 import 'package:task_app/core/helpers/spacing.dart';
 import 'package:task_app/core/helpers/toasts.dart';
 import 'package:task_app/core/widgets/custom_button.dart';
 import 'package:task_app/core/widgets/custom_text.dart';
 import 'package:task_app/features/home/logic/cubit/home_cubit.dart';
+import 'package:task_app/features/home/ui/widgets/create_task_form.dart';
 
 class TaskOptionsBottomSheet extends StatelessWidget {
   final int index;
@@ -20,7 +22,9 @@ class TaskOptionsBottomSheet extends StatelessWidget {
         state.whenOrNull(
           updateTasksSuccess: (task) {
             showToast('Task Updated Successfully');
-            context.pop();
+            if (isMobile) {
+              context.pop();
+            }
           },
           updateTasksFailure: (message) {
             showToast(
@@ -67,11 +71,46 @@ class TaskOptionsBottomSheet extends StatelessWidget {
             CustomButton(
               onPressed: () {
                 context.pop();
-                cubit.emitChangeCreateTaskState(
-                  false,
-                  isEdit: true,
-                  index: index,
-                );
+                if (isDesktop) {
+                  showDialog(
+                    context: context,
+                    builder: (_) {
+                      cubit.emitChangeCreateTaskState(
+                        false,
+                        isEdit: true,
+                        index: index,
+                      );
+                      return BlocProvider.value(
+                        value: context.read<HomeCubit>(),
+                        child: AlertDialog(
+                          content: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const CreateTaskForm(),
+                              verticalSpace(10),
+                              CustomButton(
+                                onPressed: () {
+                                  if (cubit.isEdit) {
+                                    cubit.emitUpdateTaskState();
+                                  } else {
+                                    cubit.emitSaveTaskState();
+                                  }
+                                },
+                                label: cubit.isEdit ? 'Edit Task' : 'Save Task',
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                } else {
+                  cubit.emitChangeCreateTaskState(
+                    false,
+                    isEdit: true,
+                    index: index,
+                  );
+                }
               },
               label: 'Edit Task',
               height: 40.h,
@@ -81,7 +120,9 @@ class TaskOptionsBottomSheet extends StatelessWidget {
               onPressed: () {
                 cubit.emitTaskStatusState(index);
               },
-              label: 'Mark As Complete',
+              label: cubit.allTasks[index].isDone
+                  ? 'Mark As Not Done'
+                  : 'Mark As Done',
               height: 40.h,
               backgroundColor: context.colorScheme.secondary,
             ),

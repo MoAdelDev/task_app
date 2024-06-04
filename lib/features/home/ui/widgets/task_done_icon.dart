@@ -20,7 +20,7 @@ class TaskDoneIcon extends StatelessWidget {
         Positioned(
           top: -6.h,
           bottom: 0,
-          right: -5.w,
+          right: -5,
           child: Icon(
             Icons.check,
             color: isDone

@@ -5,6 +5,6 @@ class ConnectivityService {
 
   Future<bool> hasConnection() async {
     var connectivityResult = await Connectivity().checkConnectivity();
-    return connectivityResult.contains(ConnectivityResult.none);
+    return !connectivityResult.contains(ConnectivityResult.none);
   }
 }

@@ -40,6 +40,7 @@ class HomeTaskTile extends StatelessWidget {
             vertical: 16.h,
           ),
           child: Row(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Expanded(
                 child: TaskTitleAndDueDateText(

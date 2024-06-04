@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:task_app/core/helpers/platforms.dart';
 import 'package:task_app/core/helpers/spacing.dart';
 import 'package:task_app/core/widgets/custom_tap.dart';
 import 'package:task_app/features/home/logic/cubit/home_cubit.dart';
@@ -24,20 +25,38 @@ class HomeBody extends StatelessWidget {
         children: [
           Expanded(
             child: CustomTap(
-              onTap: () {
-                // Hide create task form
-                if (!context.read<HomeCubit>().isCreateTaskFormHidden) {
-                  context.read<HomeCubit>().emitChangeCreateTaskState(true);
-                }
-              },
+              onTap: isDesktop
+                  ? null
+                  : () {
+                      // Hide create task form
+                      if (!context.read<HomeCubit>().isCreateTaskFormHidden) {
+                        context
+                            .read<HomeCubit>()
+                            .emitChangeCreateTaskState(true);
+                      }
+                    },
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.w),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const HomeWelcomeText(),
-                    verticalSpace(20),
-                    const HomeFilters(),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const HomeWelcomeText(),
+                              verticalSpace(20),
+                              const HomeFilters(),
+                            ],
+                          ),
+                        ),
+                        if (isDesktop) ...[
+                          horizontalSpace(10),
+                          const CreateTaskButtonWithForm(),
+                        ],
+                      ],
+                    ),
                     verticalSpace(10),
                     const Expanded(
                       child: HomeTasksList(),
@@ -47,8 +66,10 @@ class HomeBody extends StatelessWidget {
               ),
             ),
           ),
-          verticalSpace(10),
-          const CreateTaskButtonWithForm(),
+          if (isMobile) ...[
+            verticalSpace(10),
+            const CreateTaskButtonWithForm(),
+          ],
         ],
       ),
     );
