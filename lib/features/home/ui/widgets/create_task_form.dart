@@ -15,60 +15,84 @@ class CreateTaskForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    HomeCubit cubit = context.read();
-    return Form(
-      key: cubit.formkey,
-      child: FadeInUp(
-        child: Column(
-          children: [
-            Row(
+    return BlocBuilder<HomeCubit, HomeState>(
+      builder: (context, state) {
+        HomeCubit cubit = context.read();
+        return Form(
+          key: cubit.formkey,
+          child: FadeInUp(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(
-                  child: CustomText(
-                    text: 'Create New Task',
-                    style: context.textTheme.bodyLarge,
-                    fontWeight: FontWeightHelper.bold,
-                  ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: CustomText(
+                        text: 'Create New Task',
+                        style: context.textTheme.bodyLarge,
+                        fontWeight: FontWeightHelper.bold,
+                      ),
+                    ),
+                    CustomTap(
+                      onTap: () {
+                        if (isDesktop) {
+                          context.pop();
+                        } else {
+                          cubit.emitChangeCreateTaskState(true);
+                        }
+                      },
+                      child: Icon(
+                        Icons.close,
+                        color: context.colorScheme.error,
+                      ),
+                    ),
+                  ],
                 ),
-                CustomTap(
+                verticalSpace(20),
+                CustomTextField(
+                  controller: cubit.taskTitleController,
+                  hintText: 'Task Title',
+                  errorMsg: 'Please enter task title',
+                  keyboardType: TextInputType.text,
+                  textInputAction: TextInputAction.next,
+                ),
+                verticalSpace(10),
+                CustomTextField(
+                  controller: cubit.dueDateController,
+                  hintText: 'Due Date',
+                  errorMsg: 'Please select due date',
+                  keyboardType: TextInputType.text,
+                  readOnly: true,
+                  textInputAction: TextInputAction.next,
                   onTap: () {
-                    if (isDesktop) {
-                      context.pop();
-                    } else {
-                      cubit.emitChangeCreateTaskState(true);
-                    }
+                    cubit.emitSelectDueDateState(context);
                   },
-                  child: Icon(
-                    Icons.close,
-                    color: context.colorScheme.error,
-                  ),
                 ),
+                if (isAndroid) ...[
+                  Row(
+                    children: [
+                      Checkbox(
+                        value: cubit.isGoogleCalendarChecked,
+                        onChanged: (value) {
+                          cubit.emitGoogleCalendarCheckState();
+                        },
+                      ),
+                      Expanded(
+                        child: CustomText(
+                          text: 'Send this task to Google calendar',
+                          style: context.textTheme.bodySmall,
+                          fontWeight: FontWeightHelper.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+                verticalSpace(30),
               ],
             ),
-            verticalSpace(20),
-            CustomTextField(
-              controller: cubit.taskTitleController,
-              hintText: 'Task Title',
-              errorMsg: 'Please enter task title',
-              keyboardType: TextInputType.text,
-              textInputAction: TextInputAction.next,
-            ),
-            verticalSpace(10),
-            CustomTextField(
-              controller: cubit.dueDateController,
-              hintText: 'Due Date',
-              errorMsg: 'Please select due date',
-              keyboardType: TextInputType.text,
-              readOnly: true,
-              textInputAction: TextInputAction.next,
-              onTap: () {
-                cubit.emitSelectDueDateState(context);
-              },
-            ),
-            verticalSpace(30),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }

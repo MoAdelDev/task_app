@@ -9,6 +9,9 @@ class HomeState with _$HomeState {
   const factory HomeState.changeCreateTaskState(bool isFormHidded) =
       ChangeCreateTaskState;
 
+  const factory HomeState.changeGoogleCalendarCheck(bool isChecked) =
+      ChangeGoogleCalendarCheck;
+
   const factory HomeState.createTaskLoading() = CreateTaskLoading;
 
   const factory HomeState.createTaskSuccess(TaskModel? task) =

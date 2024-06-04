@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:intl/intl.dart';
 import 'package:task_app/core/helpers/platforms.dart';
+import 'package:task_app/core/services/google_calendar_service.dart';
 import 'package:task_app/core/sync/services/sync_service.dart';
 import 'package:task_app/features/home/data/models/filter_model.dart';
 import 'package:task_app/features/home/data/models/task_model.dart';
@@ -22,11 +23,13 @@ class HomeCubit extends Cubit<HomeState> {
   final GetTasksRepo _getTasksRepo;
   final TasksActionsRepo _tasksActionsRepo;
   final SyncService _syncService;
+  final GoogleCalendarService _googleCalendarService;
   HomeCubit(
     this._createTaskRepo,
     this._getTasksRepo,
     this._tasksActionsRepo,
     this._syncService,
+    this._googleCalendarService,
   ) : super(const HomeState.initial());
 
   StreamSubscription<List<ConnectivityResult>>? _subscription;
@@ -39,6 +42,12 @@ class HomeCubit extends Cubit<HomeState> {
     _syncService.syncTasks();
   }
 
+  bool isGoogleCalendarChecked = false;
+  void emitGoogleCalendarCheckState() {
+    isGoogleCalendarChecked = !isGoogleCalendarChecked;
+    emit(HomeState.changeGoogleCalendarCheck(isGoogleCalendarChecked));
+  }
+
   List<FilterModel> filters = [
     NotFilter(),
     FilterDone(),
@@ -46,6 +55,7 @@ class HomeCubit extends Cubit<HomeState> {
   ];
 
   int selectedFilterIndex = 0;
+
   void emitSelectFilterState(int index) {
     selectedFilterIndex = index;
     allTasks = filters[index].filterTask(originalTasks);
@@ -78,7 +88,7 @@ class HomeCubit extends Cubit<HomeState> {
   final formkey = GlobalKey<FormState>();
   final taskTitleController = TextEditingController();
   final dueDateController = TextEditingController();
-
+  DateTime? selectedDate;
   void emitSelectDueDateState(BuildContext context, {int? index}) async {
     DateTime currentDate = DateTime.now();
     if (index != null) {
@@ -86,7 +96,7 @@ class HomeCubit extends Cubit<HomeState> {
         currentDate = DateTime.parse(dueDateController.text);
       }
     }
-    DateTime? newDate = await showDatePicker(
+    selectedDate = await showDatePicker(
       context: context,
       initialDate: currentDate,
       firstDate: DateTime.now(),
@@ -95,8 +105,8 @@ class HomeCubit extends Cubit<HomeState> {
           ? DateTime.parse(dueDateController.text)
           : DateTime.now(),
     );
-    if (newDate == null) return;
-    String formattedDate = DateFormat('EEE. dd-MM-yyyy').format(newDate);
+    if (selectedDate == null) return;
+    String formattedDate = DateFormat('EEE. dd-MM-yyyy').format(selectedDate!);
     dueDateController.text = formattedDate;
   }
 
@@ -124,6 +134,11 @@ class HomeCubit extends Cubit<HomeState> {
     emit(HomeState.createTaskSuccess(taskModel));
     _clearControllers();
     _syncService.syncTasks();
+    _googleCalendarService.insert(
+      endTime: selectedDate!,
+      title: taskTitleController.text,
+      startTime: DateTime.now(),
+    );
     emitChangeCreateTaskState(true);
   }
 
